@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+html,
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  background-color: white;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-in-out;
+}
+
+.slide-up-1 {
+  animation: slideUp 0.5s ease-in-out;
+}
+
+.slide-up-2 {
+  animation: slideUp 0.9s ease-in-out;
+}
+
+.slide-up-3 {
+  animation: slideUp 1.2s ease-in-out;
+}
