@@ -22,70 +22,61 @@
     <!-- Top Bar -->
 
     <!-- Header -->
-
-    <!-- Header -->
     <header
-      x-data="{
-    mobileOpen: false,
-    lastScrollY: window.scrollY,
-    hidden: false,
-    handleScroll() {
-      if (window.scrollY > this.lastScrollY && window.scrollY > 50) {
-        this.hidden = true;
-      } else {
-        this.hidden = false;
-      }
-      this.lastScrollY = window.scrollY;
-    }
-  }"
+      x-data="{ mobileOpen: false, lastScrollY: window.scrollY, hidden: false, handleScroll() { if (window.scrollY > this.lastScrollY && window.scrollY > 50) { this.hidden = true; } else { this.hidden = false; } this.lastScrollY = window.scrollY; } }"
       x-init="window.addEventListener('scroll', () => handleScroll())"
-      :class="hidden ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'"
-      class="bg-white shadow-md sticky top-0 z-50 transition-transform duration-300 ease-in-out transform"
+      class="fixed top-0 left-0 w-full z-50"
     >
-      <div class="bg-yellow-400 p-1"></div>
       <div
-        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+        :class="hidden ? '-top-24' : 'top-0'"
+        class="absolute w-full bg-white shadow-md transition-all duration-300 ease-in-out"
       >
-        <div class="text-3xl font-bold text-black">WeRep</div>
-        <nav
-          class="hidden md:flex space-x-6 text-sm uppercase font-semibold tracking-wide"
+        <div class="bg-yellow-400 p-1"></div>
+        <div
+          class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
         >
-          <a href="index.html" class="text-yellow-500">Home</a>
-          <a href="services.html" class="hover:text-yellow-500">Services</a>
-          <a href="about.html" class="hover:text-yellow-500">About</a>
-          <a href="contact.html" class="hover:text-yellow-500">Contact</a>
-        </nav>
-        <button @click="mobileOpen = !mobileOpen" class="md:hidden">
-          <i
-            :class="mobileOpen ? 'fas fa-times' : 'fas fa-bars'"
-            class="text-xl"
-          ></i>
-        </button>
-      </div>
+          <div class="text-3xl font-bold text-black">WeRep</div>
+          <nav
+            class="hidden md:flex space-x-6 text-sm uppercase font-semibold tracking-wide"
+          >
+            <a href="index.html" class="text-yellow-500">Home</a>
 
-      <div
-        x-show="mobileOpen"
-        x-transition
-        class="md:hidden bg-white border-t border-gray-200"
-      >
-        <nav
-          class="flex flex-col px-4 py-4 space-y-2 text-sm uppercase font-semibold"
+            <a href="about.html" class="hover:text-yellow-500">About</a>
+            <a href="contact.html" class="hover:text-yellow-500">Contact</a>
+          </nav>
+          <button @click="mobileOpen = !mobileOpen" class="md:hidden">
+            <i
+              :class="mobileOpen ? 'fas fa-times' : 'fas fa-bars'"
+              class="text-xl"
+            ></i>
+          </button>
+        </div>
+        <div
+          x-show="mobileOpen"
+          x-transition
+          class="md:hidden bg-white border-t border-gray-200"
         >
-          <a href="index.html" class="text-yellow-500">Home</a>
-          <a href="services.html">Services</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </nav>
+          <nav
+            class="flex flex-col px-4 py-4 space-y-2 text-sm uppercase font-semibold"
+          >
+            <a href="index.html" class="text-yellow-500">Home</a>
+
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
       </div>
     </header>
+
     <!-- Spacer for header height -->
 
     <main>
+      <div class="mt-10"></div>
       <!-- Hero Section -->
-      <section class="relative bg-black text-white min-h-screen">
+      <section class="relative bg-black text-white p-48">
         <!-- Background Image with Overlay -->
         <img
-          src="https://res.cloudinary.com/temmarie/image/upload/v1747670803/young-students-learning-together-group-study_h6im0q.webp"
+          src="https://res.cloudinary.com/temmarie/image/upload/v1748293473/african-business-male-people-shaking-hands_axnpnp.webp"
           alt="Hero Background"
           class="absolute inset-0 w-full h-full object-cover opacity-40"
         />
@@ -96,38 +87,37 @@
         >
           <!-- Left Content -->
           <div class="max-w-3xl lg:w-1/2 xl:w-2/5 flex flex-col justify-start">
-            <h2 class="text-yellow-400 text-3xl font-light mb-2">Solutions</h2>
+            <h2 class="text-yellow-400 text-3xl font-bold mb-2">WeRep</h2>
             <h1 class="text-2xl md:text-5xl font-light leading-tight mb-6">
-              What we have to offer<br />
-              for your next business<br />
-              and career success
+              Expert Business Support in the UK
             </h1>
-            <p class="text-gray-300 mb-8">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <p class="text-white mb-8">
+              At WeRep, we provide comprehensive business support services to
+              help businesses thrive in the UK market. Our team of experts
+              offers tailored solutions to meet your unique needs.
               <span class="text-white font-medium">
-                Utenim ad minim veniam quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                From logistics and investment facilitation to business
+                representation, we've got you covered.
               </span>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum.
             </p>
           </div>
           <!-- Feature Boxes -->
           <div
             class="lg:w-1/2 xl:w-3/5 lg:ml-10 flex items-start justify-center mt-0 lg:mt-8"
           >
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl">
+            <div
+              class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl items-stretch"
+            >
               <!-- Box 1 -->
               <div
                 class="slide-up-1 border-4 border-yellow-400 p-6 text-center max-h-max"
               >
-                <h3 class="text-lg font-semibold text-white mb-2">Meet us</h3>
+                <h3 class="text-lg font-semibold text-white mb-2">About us</h3>
                 <p class="text-gray-300 text-sm mb-4">
-                  Artison ipsum dolor sit amet consectetur adip iscing
-                  ercipiscing elitsed do ullamco eiusitation.
+                  Learn more about our mission, vision, and values. Discover how
+                  we can help your business succeed in the UK.
                 </p>
-                <a href="#" class="text-yellow-400 underline text-sm"
+                <a href="about.html" class="text-yellow-400 underline text-sm"
                   >Read more</a
                 >
               </div>
@@ -135,12 +125,17 @@
               <div
                 class="slide-up-2 border-4 border-yellow-400 p-6 text-center max-h-max"
               >
-                <h3 class="text-lg font-semibold text-white mb-2">Solutions</h3>
+                <h3 class="text-lg font-semibold text-white mb-2">
+                  Our Services
+                </h3>
                 <p class="text-gray-300 text-sm mb-4">
-                  Bortolo ipsum dolor sit amet consectetur adip iscing
-                  ercipiscing elitsed do eius itation arco.
+                  Explore our range of services, including logistics, investment
+                  facilitation, and business representation. Find out how we can
+                  support your business.
                 </p>
-                <a href="#" class="text-yellow-400 underline text-sm"
+                <a
+                  href="about.html#services"
+                  class="text-yellow-400 underline text-sm"
                   >Read more</a
                 >
               </div>
@@ -150,10 +145,13 @@
               >
                 <h3 class="text-lg font-semibold text-white mb-2">Benefits</h3>
                 <p class="text-gray-300 text-sm mb-4">
-                  Lorem ipsum dolor sit amet consectetur adip iscing ercipiscing
-                  elitsed do eiusitation ullamco.
+                  Discover the benefits of working with WeRep. From increased
+                  efficiency to improved profitability, find out how we can help
+                  your business thrive.
                 </p>
-                <a href="#" class="text-yellow-400 underline text-sm"
+                <a
+                  href="about.html#services"
+                  class="text-yellow-400 underline text-sm"
                   >Read more</a
                 >
               </div>
@@ -203,7 +201,7 @@
                 href="#"
                 class="border border-yellow-500 text-yellow-500 px-6 py-3 font-semibold hover:bg-yellow-500 hover:text-white transition-all"
               >
-                Contacts
+                Contact Us
               </a>
             </div>
           </div>
@@ -423,25 +421,128 @@
         </div>
       </section>
 
-      <!-- CTA Section -->
-      <section class="bg-yellow-400 text-black py-16 text-center">
-        <div class="max-w-2xl mx-auto px-4">
-          <h3 class="text-2xl font-bold mb-4">
-            Ready to Expand Your Business to the UK?
-          </h3>
-          <p class="mb-6">
-            Let WeRep be your reliable eyes, ears, and hands in the United
-            Kingdom. Get in touch today to get started.
-          </p>
-          <a
-            href="about.html#contact"
-            class="bg-black text-white px-6 py-2 font-semibold hover:bg-gray-800 transition"
-          >
-            Contact Us Now
-          </a>
+      <!-- contact -->
+      <section
+        class="bg-cover bg-center bg-no-repeat min-w-full border border-b-4 border-black"
+        style="
+          background-image: url('https://res.cloudinary.com/temmarie/image/upload/v1748248419/young-african-businessman-businessman-shaking-hand-front-glass-window_bwrmlf.webp');
+        "
+      >
+        <div class="flex min-h-screen bg-black/40 text-white">
+          <!-- Left Section -->
+          <div class="w-1/2 p-16 flex flex-col justify-center">
+            <p class="text-lg">Top Values</p>
+            <h1 class="text-5xl font-light mb-8">Core Values</h1>
+            <div class="w-3/4 h-1 bg-white mb-10"></div>
+
+            <!-- Metal Roofing -->
+            <div class="mb-6">
+              <p class="text-lg">Efficiency</p>
+              <div class="relative w-full h-1 bg-white/50 mt-2">
+                <div
+                  class="absolute top-0 left-0 h-1 bg-yellow-500"
+                  style="width: 100%"
+                ></div>
+              </div>
+              <div class="mt-1">
+                <span class="bg-black px-2 py-1 text-sm">100 %</span>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <p class="text-lg">Local Expertise</p>
+              <div class="relative w-full h-1 bg-white/50 mt-2">
+                <div
+                  class="absolute top-0 left-0 h-1 bg-yellow-500"
+                  style="width: 100%"
+                ></div>
+              </div>
+              <div class="mt-1">
+                <span class="bg-black px-2 py-1 text-sm">100 %</span>
+              </div>
+            </div>
+
+            <!-- Financial Consulting -->
+            <div class="mb-6">
+              <p class="text-lg">Personalised Service</p>
+              <div class="relative w-full h-1 bg-white/50 mt-2">
+                <div
+                  class="absolute top-0 left-0 h-1 bg-yellow-500"
+                  style="width: 100%"
+                ></div>
+              </div>
+              <div class="mt-1">
+                <span class="bg-black px-2 py-1 text-sm">100 %</span>
+              </div>
+            </div>
+
+            <!-- Outdoor Gardens -->
+            <div class="mb-6">
+              <p class="text-lg">Customer-Centricity</p>
+              <div class="relative w-full h-1 bg-white/50 mt-2">
+                <div
+                  class="absolute top-0 left-0 h-1 bg-yellow-500"
+                  style="width: 100%"
+                ></div>
+              </div>
+              <div class="mt-1">
+                <span class="bg-black px-2 py-1 text-sm">100 %</span>
+              </div>
+            </div>
+
+            <a href="#" class="mt-4 text-white underline decoration-yellow-500"
+              >Learn More</a
+            >
+          </div>
+
+          <!-- Right Section -->
+          <div class="w-1/2 bg-yellow-500 p-16 flex flex-col justify-center">
+            <!-- Address -->
+            <div class="text-white mb-6">
+              <div class="flex items-center mb-2">
+                <i class="fas fa-location-dot mr-3"></i>
+                <p>184 Main Rep Street, 8007</p>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-calendar-days mr-3"></i>
+                <p>Mon - Sat 8.00 - 18.00</p>
+              </div>
+            </div>
+
+            <h2 class="text-4xl font-light text-white mb-8">Contact us now</h2>
+
+            <!-- Contact Form -->
+            <form class="space-y-6">
+              <div class="flex space-x-4">
+                <input
+                  type="text"
+                  placeholder="name"
+                  class="flex-1 bg-transparent border-b border-white placeholder-white focus:outline-none"
+                />
+                <input
+                  type="email"
+                  placeholder="email"
+                  class="flex-1 bg-transparent border-b border-white placeholder-white focus:outline-none"
+                />
+              </div>
+              <textarea
+                rows="3"
+                placeholder="Write your message"
+                class="w-full bg-transparent border-b border-white placeholder-white focus:outline-none"
+              ></textarea>
+
+              <button
+                class="flex items-center bg-white text-gray-800 px-4 py-2 rounded shadow mt-4"
+              >
+                <i class="fas fa-envelope mr-2"></i> Send message
+              </button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
+    <!-- Footer -->
+
     <!-- Footer -->
     <footer class="bg-black text-white py-16 border-t border-white/10">
       <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
@@ -452,8 +553,10 @@
               <div class="text-4xl font-bold text-yellow-400">WeRep</div>
             </div>
             <p class="text-white/70 text-sm">
-              WeRep connects talent with vision. Explore our creative journey
-              and let’s craft your next masterpiece together.
+              WeRep is your trusted partner for business support and
+              representation in the UK. We help businesses navigate the
+              complexities of operating in the UK, providing expert logistics,
+              investment facilitation, and more.
             </p>
             <div class="flex space-x-4 text-white/60">
               <a href="#" class="hover:text-yellow-400">
@@ -470,55 +573,65 @@
               </a>
             </div>
           </div>
-
           <!-- Navigation -->
           <div>
             <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
             <ul class="space-y-2 text-white/70 text-sm">
-              <li><a href="#" class="hover:text-yellow-400">Home</a></li>
-              <li><a href="#" class="hover:text-yellow-400">Our Team</a></li>
-              <li><a href="#" class="hover:text-yellow-400">Portfolio</a></li>
-              <li><a href="#" class="hover:text-yellow-400">Blog</a></li>
-              <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
+              <li>
+                <a href="index.html" class="hover:text-yellow-400">Home</a>
+              </li>
+
+              <li>
+                <a href="about.html" class="hover:text-yellow-400">About</a>
+              </li>
+              <li>
+                <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+              </li>
             </ul>
           </div>
-
           <!-- Services -->
           <div>
             <h4 class="text-lg font-semibold mb-4">Our Services</h4>
             <ul class="space-y-2 text-white/70 text-sm">
-              <li><a href="#" class="hover:text-yellow-400">Photography</a></li>
-              <li><a href="#" class="hover:text-yellow-400">Videography</a></li>
-              <li><a href="#" class="hover:text-yellow-400">Editing</a></li>
               <li>
-                <a href="#" class="hover:text-yellow-400">Brand Campaigns</a>
+                <a href="#" class="hover:text-yellow-400">Business Support</a>
               </li>
               <li>
-                <a href="#" class="hover:text-yellow-400">Creative Direction</a>
+                <a href="#" class="hover:text-yellow-400"
+                  >Logistics and Shipping</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-yellow-400"
+                  >Investment Facilitation</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-yellow-400"
+                  >UK Business Representation</a
+                >
               </li>
             </ul>
           </div>
-
           <!-- Contact Info -->
           <div>
             <h4 class="text-lg font-semibold mb-4">Contact</h4>
             <ul class="space-y-4 text-white/70 text-sm">
               <li class="flex items-start gap-2">
                 <i class="fas fa-map-marker-alt mt-1 text-yellow-400"></i>
-                456 Studio Ave, Lagos, Nigeria
+                UK Office Address
               </li>
               <li class="flex items-center gap-2">
                 <i class="fas fa-phone-alt text-yellow-400"></i>
-                +234 800 000 0000
+                +44 1234 567890
               </li>
               <li class="flex items-center gap-2">
                 <i class="fas fa-envelope text-yellow-400"></i>
-                hello@werep.ng
+                hello@werep.co.uk
               </li>
             </ul>
           </div>
         </div>
-
         <!-- Bottom Bar -->
         <div
           class="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between"
@@ -529,11 +642,9 @@
           <div class="flex space-x-4 mt-4 md:mt-0 text-white/50 text-sm">
             <a href="#" class="hover:text-yellow-400">Privacy Policy</a>
             <a href="#" class="hover:text-yellow-400">Terms</a>
-            <a href="#" class="hover:text-yellow-400">Cookies</a>
           </div>
         </div>
       </div>
-
       <script>
         document.getElementById("current-year").textContent =
           new Date().getFullYear();

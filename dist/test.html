@@ -3,314 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Services | WeRep</title>
-    <link rel="stylesheet" href="assets/css/output.css" />
+    <title>Core Skills & Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      crossorigin="anonymous"
     />
-    <script src="https://unpkg.com/alpinejs" defer></script>
   </head>
-  <body class="bg-white text-gray-900 font-sans">
-    <!-- Header -->
-    <header
-      class="bg-white shadow-md sticky top-0 z-50"
-      x-data="{ mobileOpen: false }"
-    >
+
+  <div class="bg-white py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center relative">
+      <!-- Stylish Quotation Mark -->
       <div
-        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+        class="text-6xl text-yellow-400 font-serif absolute top-0 left-1 transform -translate-x-6 -translate-y-3 opacity-30 select-none"
       >
-        <div class="text-3xl font-bold text-black">WeRep</div>
-        <nav
-          class="hidden md:flex space-x-6 text-sm uppercase font-semibold tracking-wide"
-        >
-          <a href="index.html" class="hover:text-yellow-500">Home</a>
-          <a href="services.html" class="text-yellow-500">Services</a>
-          <a href="about.html" class="hover:text-yellow-500">About</a>
-          <a href="contact.html" class="hover:text-yellow-500">Contact</a>
-        </nav>
-        <button @click="mobileOpen = !mobileOpen" class="md:hidden">
-          <i
-            :class="mobileOpen ? 'fas fa-times' : 'fas fa-bars'"
-            class="text-xl"
-          ></i>
-        </button>
+        &ldquo;
       </div>
-      <div
-        x-show="mobileOpen"
-        x-transition
-        class="md:hidden bg-white border-t border-gray-200"
+
+      <!-- Quote Text -->
+      <blockquote
+        class="text-2xl md:text-3xl font-medium text-gray-800 leading-relaxed"
       >
-        <nav
-          class="flex flex-col px-4 py-4 space-y-2 text-sm uppercase font-semibold"
-        >
-          <a href="index.html">Home</a>
-          <a href="services.html" class="text-yellow-500">Services</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
+        “The secret of getting ahead is getting started.”
+      </blockquote>
 
-    <!-- Services Section -->
-    <section class="py-16 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-4">
-        <h1 class="text-4xl font-bold text-center mb-12">Our Services</h1>
-
-        <div class="space-y-12">
-          <div>
-            <h2 class="text-2xl font-semibold text-yellow-500">
-              Investment Facilitation
-            </h2>
-            <p class="text-gray-700 mt-2">
-              Entering the UK market? We assist you from idea to
-              execution—advising on strategic locations, staffing, logistics,
-              and compliance. Whether you’re a new investor or scaling up, we
-              guide you through every step for a successful business launch.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="text-2xl font-semibold text-yellow-500">
-              Operation Management & Service Logistics
-            </h2>
-            <p class="text-gray-700 mt-2">
-              We act as your operational backbone in the UK—managing day-to-day
-              business activities on your behalf. Avoid unnecessary travel,
-              accommodation costs, and time loss. Our seasoned professionals
-              ensure your instructions are executed efficiently and to standard.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="text-2xl font-semibold text-yellow-500">
-              Training & Professional Development
-            </h2>
-            <p class="text-gray-700 mt-2">
-              Leverage the UK’s world-class training and educational ecosystem.
-              We coordinate everything: registration, visa support, airport
-              pickups, comfortable accommodation, and logistics for your team.
-              Your staff's development, managed with precision.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="text-2xl font-semibold text-yellow-500">
-              Event & Seminar Representation
-            </h2>
-            <p class="text-gray-700 mt-2">
-              We plan, host, or represent you at business events, product
-              launches, exhibitions, and seminars. Ensuring brand visibility and
-              message alignment, we follow your brief to the letter—executing it
-              with professionalism and local marketing finesse.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="text-2xl font-semibold text-yellow-500">
-              Meeting & Conference Attendance
-            </h2>
-            <p class="text-gray-700 mt-2">
-              Can't attend that important UK meeting? We will. As your
-              representatives, we sit in, carry out your instructions, and
-              deliver detailed reports. Real-time updates are optional. Security
-              and confidentiality are paramount in our data handling practices.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="text-2xl font-semibold text-yellow-500">
-              Goods & Product Inspection
-            </h2>
-            <p class="text-gray-700 mt-2">
-              With over 25 years in logistics, inspections are our specialty. We
-              attend supplier sites across the UK—sometimes at short notice—and
-              provide real-time video, photo, and document updates so you remain
-              fully informed and in control.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="text-2xl font-semibold text-yellow-500">
-              Custom Cargo Clearance & Delivery
-            </h2>
-            <p class="text-gray-700 mt-2">
-              With 30+ years in multimodal logistics, we clear your goods
-              through UK customs and deliver to your chosen warehouse or
-              customers. We can also arrange forwarding to other countries or
-              provide storage until you're ready to distribute.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="text-2xl font-semibold text-yellow-500">
-              Warehousing & Storage Solutions
-            </h2>
-            <p class="text-gray-700 mt-2">
-              Whether short-term or long-term, we offer scalable warehousing
-              solutions tailored to your needs. Our network ensures safe,
-              accessible, and affordable options no matter your shipment size or
-              frequency.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="text-2xl font-semibold text-yellow-500">
-              Personal Shopper
-            </h2>
-            <p class="text-gray-700 mt-2">
-              Need trusted shopping assistance in the UK? We buy based on your
-              specific preferences—fashion, tech, or luxury goods. From purchase
-              to international delivery (including local customs clearance where
-              available), we bring your UK shopping experience to your doorstep.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8">
-      <div
-        class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
+      <!-- Author -->
+      <footer
+        class="mt-6 text-sm text-gray-500 font-semibold tracking-wide uppercase"
       >
-        <p>&copy; 2025 WeRep. All rights reserved.</p>
-        <div class="flex space-x-4 mt-4 md:mt-0">
-          <a href="#" class="hover:text-yellow-400"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a href="#" class="hover:text-yellow-400"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a href="#" class="hover:text-yellow-400"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
-<!-- about us -->
-<section class="bg-gray-100 relative overflow-hidden">
-  <img
-    src="https://res.cloudinary.com/temmarie/image/upload/v1748248419/african-man-black-suit_tu3raq.webp"
-    alt="impact"
-    class="absolute inset-0 w-full h-full object-cover"
-  />
-  <div class="absolute inset-0 bg-gray-300/90"></div>
-
-  <div
-    class="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10"
-  >
-    <!-- About Me (Left Column) -->
-    <div>
-      <p class="text-black text-sm">Our Story</p>
-      <h2 class="text-4xl font-semibold text-white mt-1 mb-4">About Us</h2>
-      <div class="w-24 h-1 bg-yellow-400 mb-6"></div>
-      <p class="text-black mb-4 leading-relaxed">
-        Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim
-        veniam quis nostrud exercitation ullamco laboris.
-      </p>
-      <p class="text-white font-semibold mb-8 leading-relaxed">
-        Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim
-        veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat irure dolor in reprehende.
-      </p>
-      <div class="flex flex-wrap gap-4">
-        <a
-          href="#"
-          class="bg-yellow-500 text-white font-semibold px-6 py-3 hover:bg-yellow-600 transition-all"
-        >
-          Learn More
-        </a>
-        <a
-          href="#"
-          class="border border-yellow-500 text-yellow-500 px-6 py-3 font-semibold hover:bg-yellow-500 hover:text-white transition-all"
-        >
-          Contacts
-        </a>
-      </div>
-    </div>
-
-    <!-- Testimonials Carousel (Right Column) -->
-    <div
-      x-data="{ 
-  activeSlide: 0, 
-  slides: [
-    { 
-      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
-      name: 'Lore sito ameto consectetur.', 
-      text: 'Lorem ipsum dolor sit amet consectetur.' 
-    },
-    { 
-      image: 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
-      name: 'Lore sito ameto consectetur.', 
-      text: 'Lorem ipsum dolor sit amet consectetur.' 
-    },
-    { 
-      image: 'https://res.cloudinary.com/temmarie/image/upload/v1747598917/customer_l8ma44.webp', 
-      name: 'Lore sito ameto consectetur.', 
-      text: 'Lorem ipsum dolor sit amet consectetur.' 
-    },
-    { 
-      image: 'https://images.unsplash.com/photo-1603415526960-f7e0328b6a7c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
-      name: 'Lore sito ameto consectetur.', 
-      text: 'Lorem ipsum dolor sit amet consectetur.' 
-    },
-    { 
-      image: 'https://images.unsplash.com/photo-1522071820085-fe599b221376?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
-      name: 'Lore sito ameto consectetur.', 
-      text: 'Lorem ipsum dolor sit amet consectetur.' 
-    },
-    { 
-      image: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
-      name: 'Lore sito ameto consectetur.', 
-      text: 'Lorem ipsum dolor sit amet consectetur.' 
-    }
-  ],
-  next() { this.activeSlide = (this.activeSlide + 1) % this.slides.length; },
-  prev() { this.activeSlide = (this.activeSlide - 1 + this.slides.length) % this.slides.length; }
-}"
-      x-init="setInterval(() => next(), 5000)"
-      class="relative"
-    >
-      <div class="flex space-x-4 overflow-hidden">
-        <template x-for="(slide, index) in slides" :key="index">
-          <div
-            x-show="activeSlide === index"
-            x-transition
-            class="min-w-full transition-all duration-700 ease-in-out"
-          >
-            <div class="border-2 border-yellow-400 p-6 text-center">
-              <img
-                :src="slide.image"
-                alt=""
-                class="mx-auto mb-4 h-40 w-40 object-cover rounded"
-              />
-              <div class="p-4">
-                <h3
-                  class="text-yellow-500 text-sm font-semibold"
-                  x-text="slide.name"
-                ></h3>
-                <p class="text-gray-600 text-sm mt-1" x-text="slide.text"></p>
-              </div>
-            </div>
-          </div>
-        </template>
-      </div>
-      <!-- Dots -->
-      <div class="absolute top-4 right-4 flex space-x-2">
-        <template x-for="(slide, i) in slides" :key="i">
-          <div
-            :class="activeSlide === i ? 'bg-yellow-500' : 'bg-gray-300'"
-            class="w-3 h-3 rounded-full cursor-pointer"
-            @click="activeSlide = i"
-          ></div>
-        </template>
-      </div>
+        — Mark Twain
+      </footer>
     </div>
   </div>
-</section>
+
+  <section
+    class="bg-cover bg-center bg-no-repeat"
+    style="background-image: url('https://via.placeholder.com/1500x900')"
+  >
+    <div class="flex min-h-screen bg-black/40 text-white">
+      <!-- Left Section -->
+      <div class="w-1/2 p-16 flex flex-col justify-center">
+        <p class="text-lg">Top team skills</p>
+        <h1 class="text-5xl font-light mb-8">Core skills</h1>
+        <div class="w-3/4 h-1 bg-white mb-10"></div>
+
+        <!-- Metal Roofing -->
+        <div class="mb-6">
+          <p class="text-lg">Metal roofing</p>
+          <div class="relative w-full h-1 bg-white/50 mt-2">
+            <div
+              class="absolute top-0 left-0 h-1 bg-yellow-500"
+              style="width: 90%"
+            ></div>
+          </div>
+          <div class="mt-1">
+            <span class="bg-black px-2 py-1 text-sm">90 %</span>
+          </div>
+        </div>
+
+        <!-- Financial Consulting -->
+        <div class="mb-6">
+          <p class="text-lg">Financial consulting</p>
+          <div class="relative w-full h-1 bg-white/50 mt-2">
+            <div
+              class="absolute top-0 left-0 h-1 bg-yellow-500"
+              style="width: 75%"
+            ></div>
+          </div>
+          <div class="mt-1">
+            <span class="bg-black px-2 py-1 text-sm">75 %</span>
+          </div>
+        </div>
+
+        <!-- Outdoor Gardens -->
+        <div class="mb-6">
+          <p class="text-lg">Outdoor gardens</p>
+          <div class="relative w-full h-1 bg-white/50 mt-2">
+            <div
+              class="absolute top-0 left-0 h-1 bg-yellow-500"
+              style="width: 100%"
+            ></div>
+          </div>
+          <div class="mt-1">
+            <span class="bg-black px-2 py-1 text-sm">100 %</span>
+          </div>
+        </div>
+
+        <a href="#" class="mt-4 text-white underline decoration-yellow-500"
+          >Check all out skills</a
+        >
+      </div>
+
+      <!-- Right Section -->
+      <div class="w-1/2 bg-yellow-500 p-16 flex flex-col justify-center">
+        <!-- Address -->
+        <div class="text-white mb-6">
+          <div class="flex items-center mb-2">
+            <i class="fas fa-location-dot mr-3"></i>
+            <p>184 Main Collins Street, 8007</p>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-calendar-days mr-3"></i>
+            <p>Mon - Sat 8.00 - 18.00</p>
+          </div>
+        </div>
+
+        <h2 class="text-4xl font-light text-white mb-8">Contact us now</h2>
+
+        <!-- Contact Form -->
+        <form class="space-y-6">
+          <div class="flex space-x-4">
+            <input
+              type="text"
+              placeholder="name"
+              class="flex-1 bg-transparent border-b border-white placeholder-white focus:outline-none"
+            />
+            <input
+              type="email"
+              placeholder="email"
+              class="flex-1 bg-transparent border-b border-white placeholder-white focus:outline-none"
+            />
+          </div>
+          <textarea
+            rows="3"
+            placeholder="Write your message"
+            class="w-full bg-transparent border-b border-white placeholder-white focus:outline-none"
+          ></textarea>
+
+          <button
+            class="flex items-center bg-white text-gray-800 px-4 py-2 rounded shadow mt-4"
+          >
+            <i class="fas fa-envelope mr-2"></i> Send message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</html>
