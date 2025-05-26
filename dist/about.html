@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | WeRep</title>
+    <link rel="stylesheet" href="assets/css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/alpinejs" defer></script>
+  </head>
+  <body class="bg-white text-gray-900 font-sans">
+    <!-- Top Bar -->
+
+    <!-- Header -->
+    <header
+      x-data="{
+    mobileOpen: false,
+    lastScrollY: window.scrollY,
+    hidden: false,
+    handleScroll() {
+      if (window.scrollY > this.lastScrollY && window.scrollY > 50) {
+        this.hidden = true;
+      } else {
+        this.hidden = false;
+      }
+      this.lastScrollY = window.scrollY;
+    }
+  }"
+      x-init="window.addEventListener('scroll', () => handleScroll())"
+      :class="hidden ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'"
+      class="bg-white shadow-md sticky top-0 z-50 transition-transform duration-300 ease-in-out transform"
+    >
+      <div class="bg-yellow-400 p-1"></div>
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="text-3xl font-bold text-black">WeRep</div>
+        <nav
+          class="hidden md:flex space-x-6 text-sm uppercase font-semibold tracking-wide"
+        >
+          <a href="index.html" class="text-yellow-500">Home</a>
+          <a href="services.html" class="hover:text-yellow-500">Services</a>
+          <a href="about.html" class="hover:text-yellow-500">About</a>
+          <a href="contact.html" class="hover:text-yellow-500">Contact</a>
+        </nav>
+        <button @click="mobileOpen = !mobileOpen" class="md:hidden">
+          <i
+            :class="mobileOpen ? 'fas fa-times' : 'fas fa-bars'"
+            class="text-xl"
+          ></i>
+        </button>
+      </div>
+
+      <div
+        x-show="mobileOpen"
+        x-transition
+        class="md:hidden bg-white border-t border-gray-200"
+      >
+        <nav
+          class="flex flex-col px-4 py-4 space-y-2 text-sm uppercase font-semibold"
+        >
+          <a href="index.html" class="text-yellow-500">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+<body class="text-gray-800 bg-white leading-relaxed tracking-wide">
+
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-yellow-400 text-white py-20">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h1 class="text-5xl font-bold mb-4">About WeRep</h1>
+        <p class="text-xl max-w-2xl mx-auto">
+          Trusted UK-based business support and representation — for when you need local results without being local.
+        </p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10 text-gray-900">Who We Are</h2>
+        <p class="text-lg text-gray-700 max-w-4xl mx-auto text-center mb-12">
+          At <strong>WeRep</strong>, our mission is simple: we make your operations or trip in the UK seamless, efficient, and cost-effective. 
+          We help reduce bureaucratic bottlenecks by representing your business interests on ground, leveraging deep local expertise—so you don’t have to be physically present to make an impact.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-10">
+          <!-- Each item -->
+          <div>
+            <h3 class="text-xl font-semibold text-yellow-500 mb-2">Investment Facilitation</h3>
+            <p class="text-gray-700">
+              From research to grand opening, we help launch or expand your business in the UK—handling logistics, compliance, and recruitment.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-yellow-500 mb-2">Operation Management & Logistics</h3>
+            <p class="text-gray-700">
+              Keep your UK operations running smoothly—without flying in. We handle vendors, compliance, and daily tasks professionally.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-yellow-500 mb-2">Training & Development</h3>
+            <p class="text-gray-700">
+              Seamless coordination of UK training logistics—from arrival to course completion—for your team’s success.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-yellow-500 mb-2">Event Representation</h3>
+            <p class="text-gray-700">
+              We represent your brand at UK events or manage full seminar launches—executing your vision with clarity and polish.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-yellow-500 mb-2">Meetings & Conferences</h3>
+            <p class="text-gray-700">
+              We attend, report, and represent you at key meetings or conferences, ensuring presence without physical presence.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-yellow-500 mb-2">Product Inspection</h3>
+            <p class="text-gray-700">
+              We perform live or recorded product inspections, giving you visual assurance before approval or shipment.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-yellow-500 mb-2">Cargo Clearance & Delivery</h3>
+            <p class="text-gray-700">
+              Our team ensures hassle-free customs clearance, last-mile delivery, or forwarding—fully compliant and timely.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-yellow-500 mb-2">Warehousing & Storage</h3>
+            <p class="text-gray-700">
+              Secure and scalable warehousing across the UK tailored to your product flow, frequency, and cost goals.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-yellow-500 mb-2">Personal Shopper</h3>
+            <p class="text-gray-700">
+              From high street to high tech, we purchase to your exact instructions and handle international delivery discreetly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview Grid -->
+    <section class="bg-white py-16">
+      <div class="max-w-7xl mx-auto px-4 text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900">Our Services at a Glance</h2>
+        <p class="text-gray-600 mt-2 max-w-xl mx-auto">
+          Explore the highlights of our UK representation and business support solutions.
+        </p>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-3 px-4 max-w-7xl mx-auto">
+        <!-- Service Cards -->
+        <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
+          <i class="fas fa-handshake text-yellow-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Investment Facilitation</h3>
+          <p class="text-sm text-gray-700">
+            Helping you establish a UK market presence with end-to-end support.
+          </p>
+        </div>
+        <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
+          <i class="fas fa-cogs text-yellow-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Operations Management</h3>
+          <p class="text-sm text-gray-700">
+            Vendor management, local compliance, and daily task execution.
+          </p>
+        </div>
+        <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
+          <i class="fas fa-chalkboard-teacher text-yellow-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Training Support</h3>
+          <p class="text-sm text-gray-700">
+            We handle logistics for professional development programs and courses.
+          </p>
+        </div>
+        <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
+          <i class="fas fa-microphone text-yellow-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Event Representation</h3>
+          <p class="text-sm text-gray-700">
+            Brand presence at exhibitions, conferences, or private seminars.
+          </p>
+        </div>
+        <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
+          <i class="fas fa-users text-yellow-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Meeting Delegation</h3>
+          <p class="text-sm text-gray-700">
+            Trusted in-person attendance and updates for UK meetings.
+          </p>
+        </div>
+        <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
+          <i class="fas fa-box-open text-yellow-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Product Inspection</h3>
+          <p class="text-sm text-gray-700">
+            Real-time video/photo reporting to verify goods before acceptance.
+          </p>
+        </div>
+        <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
+          <i class="fas fa-warehouse text-yellow-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Warehousing</h3>
+          <p class="text-sm text-gray-700">
+            UK-based storage options tailored to your supply chain.
+          </p>
+        </div>
+        <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
+          <i class="fas fa-shipping-fast text-yellow-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Customs & Delivery</h3>
+          <p class="text-sm text-gray-700">
+            Quick clearance and secure delivery—within or beyond the UK.
+          </p>
+        </div>
+        <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
+          <i class="fas fa-shopping-bag text-yellow-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Personal Shopper</h3>
+          <p class="text-sm text-gray-700">
+            We buy on your behalf and deliver discreetly—anywhere.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+      <div
+        class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
+      >
+        <p>&copy; 2025 WeRep. All rights reserved.</p>
+        <div class="flex space-x-4 mt-4 md:mt-0">
+          <a href="#" class="hover:text-yellow-400"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" class="hover:text-yellow-400"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="#" class="hover:text-yellow-400"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

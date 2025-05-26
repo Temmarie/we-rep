@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services | WeRep</title>
+    <link rel="stylesheet" href="assets/css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://unpkg.com/alpinejs" defer></script>
+  </head>
+
+  <body class="bg-white text-gray-900 font-sans">
+    <!-- Top Bar -->
+
+    <!-- Header -->
+    <header
+      x-data="{
+    mobileOpen: false,
+    lastScrollY: window.scrollY,
+    hidden: false,
+    handleScroll() {
+      if (window.scrollY > this.lastScrollY && window.scrollY > 50) {
+        this.hidden = true;
+      } else {
+        this.hidden = false;
+      }
+      this.lastScrollY = window.scrollY;
+    }
+  }"
+      x-init="window.addEventListener('scroll', () => handleScroll())"
+      :class="hidden ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'"
+      class="bg-white shadow-md sticky top-0 z-50 transition-transform duration-300 ease-in-out transform"
+    >
+      <div class="bg-yellow-400 p-1"></div>
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="text-3xl font-bold text-black">WeRep</div>
+        <nav
+          class="hidden md:flex space-x-6 text-sm uppercase font-semibold tracking-wide"
+        >
+          <a href="index.html" class="text-yellow-500">Home</a>
+          <a href="services.html" class="hover:text-yellow-500">Services</a>
+          <a href="about.html" class="hover:text-yellow-500">About</a>
+          <a href="contact.html" class="hover:text-yellow-500">Contact</a>
+        </nav>
+        <button @click="mobileOpen = !mobileOpen" class="md:hidden">
+          <i
+            :class="mobileOpen ? 'fas fa-times' : 'fas fa-bars'"
+            class="text-xl"
+          ></i>
+        </button>
+      </div>
+
+      <div
+        x-show="mobileOpen"
+        x-transition
+        class="md:hidden bg-white border-t border-gray-200"
+      >
+        <nav
+          class="flex flex-col px-4 py-4 space-y-2 text-sm uppercase font-semibold"
+        >
+          <a href="index.html" class="text-yellow-500">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Heading -->
+    <section class="bg-gray-100 py-12 text-center">
+      <h1 class="text-4xl font-bold text-gray-900">Our Services</h1>
+      <p class="text-gray-600 mt-2 max-w-xl mx-auto">
+        Comprehensive UK representation services tailored for your business
+        needs.
+      </p>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-4 grid gap-8 md:grid-cols-3">
+        <!-- Service Card Example -->
+        <div class="p-6 border rounded shadow hover:shadow-lg transition">
+          <i class="fas fa-handshake text-yellow-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Investment Facilitation</h3>
+          <p class="text-sm text-gray-700">
+            We help you establish presence in the UK market—guiding on
+            licensing, locations, vendors, and legal requirements.
+          </p>
+        </div>
+        <div class="p-6 border rounded shadow hover:shadow-lg transition">
+          <i class="fas fa-cogs text-yellow-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Operation Management</h3>
+          <p class="text-sm text-gray-700">
+            End-to-end operational handling—from deliveries to vendor
+            coordination and local reporting.
+          </p>
+        </div>
+        <div class="p-6 border rounded shadow hover:shadow-lg transition">
+          <i
+            class="fas fa-chalkboard-teacher text-yellow-500 text-3xl mb-4"
+          ></i>
+          <h3 class="text-xl font-semibold mb-2">Training & Development</h3>
+          <p class="text-sm text-gray-700">
+            Organizing tailored training sessions and professional development
+            workshops with industry experts.
+          </p>
+        </div>
+        <div class="p-6 border rounded shadow hover:shadow-lg transition">
+          <i class="fas fa-microphone text-yellow-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Event Representation</h3>
+          <p class="text-sm text-gray-700">
+            We attend events, conferences, and trade shows—representing your
+            brand, gathering insights, and networking on your behalf.
+          </p>
+        </div>
+        <div class="p-6 border rounded shadow hover:shadow-lg transition">
+          <i class="fas fa-users text-yellow-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Meetings & Negotiations</h3>
+          <p class="text-sm text-gray-700">
+            Trusted representation in critical UK meetings and
+            negotiations—ensuring your interests are professionally presented.
+          </p>
+        </div>
+        <div class="p-6 border rounded shadow hover:shadow-lg transition">
+          <i class="fas fa-box-open text-yellow-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Product Inspection</h3>
+          <p class="text-sm text-gray-700">
+            Physical product checks before delivery or shipment—verifying
+            condition, quality, and standards.
+          </p>
+        </div>
+        <div class="p-6 border rounded shadow hover:shadow-lg transition">
+          <i class="fas fa-warehouse text-yellow-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Warehousing & Storage</h3>
+          <p class="text-sm text-gray-700">
+            Short- and long-term storage solutions for products, samples, or
+            business supplies across the UK.
+          </p>
+        </div>
+        <div class="p-6 border rounded shadow hover:shadow-lg transition">
+          <i class="fas fa-shipping-fast text-yellow-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Customs & Delivery</h3>
+          <p class="text-sm text-gray-700">
+            We manage UK customs clearance and final-mile delivery with
+            real-time tracking and updates.
+          </p>
+        </div>
+        <div class="p-6 border rounded shadow hover:shadow-lg transition">
+          <i class="fas fa-shopping-bag text-yellow-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Personal Shopper</h3>
+          <p class="text-sm text-gray-700">
+            Looking for UK goods? Our personal shopper service handles local
+            sourcing, purchasing, and secure delivery to your location.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-yellow-400 py-16 text-center text-black">
+      <h2 class="text-2xl font-bold mb-4">Interested in Working With WeRep?</h2>
+      <p class="mb-6 max-w-xl mx-auto">
+        Let us represent your business professionally and reliably in the UK.
+        Get in touch to discuss how we can help.
+      </p>
+      <a
+        href="about.html#contact"
+        class="bg-black text-white px-6 py-2 font-semibold hover:bg-gray-800 transition"
+      >
+        Contact Us
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+      <div
+        class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
+      >
+        <p>&copy; 2025 WeRep. All rights reserved.</p>
+        <div class="flex space-x-4 mt-4 md:mt-0">
+          <a href="#" class="hover:text-yellow-400"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" class="hover:text-yellow-400"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="#" class="hover:text-yellow-400"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

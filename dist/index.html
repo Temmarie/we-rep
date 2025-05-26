@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeRep | Your UK Business Representation Partner</title>
+    <link rel="stylesheet" href="assets/css/output.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+
+  <body class="bg-white text-gray-900 font-sans">
+    <!-- Top Bar -->
+
+    <!-- Header -->
+
+    <!-- Header -->
+    <header
+      x-data="{
+    mobileOpen: false,
+    lastScrollY: window.scrollY,
+    hidden: false,
+    handleScroll() {
+      if (window.scrollY > this.lastScrollY && window.scrollY > 50) {
+        this.hidden = true;
+      } else {
+        this.hidden = false;
+      }
+      this.lastScrollY = window.scrollY;
+    }
+  }"
+      x-init="window.addEventListener('scroll', () => handleScroll())"
+      :class="hidden ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'"
+      class="bg-white shadow-md sticky top-0 z-50 transition-transform duration-300 ease-in-out transform"
+    >
+      <div class="bg-yellow-400 p-1"></div>
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="text-3xl font-bold text-black">WeRep</div>
+        <nav
+          class="hidden md:flex space-x-6 text-sm uppercase font-semibold tracking-wide"
+        >
+          <a href="index.html" class="text-yellow-500">Home</a>
+          <a href="services.html" class="hover:text-yellow-500">Services</a>
+          <a href="about.html" class="hover:text-yellow-500">About</a>
+          <a href="contact.html" class="hover:text-yellow-500">Contact</a>
+        </nav>
+        <button @click="mobileOpen = !mobileOpen" class="md:hidden">
+          <i
+            :class="mobileOpen ? 'fas fa-times' : 'fas fa-bars'"
+            class="text-xl"
+          ></i>
+        </button>
+      </div>
+
+      <div
+        x-show="mobileOpen"
+        x-transition
+        class="md:hidden bg-white border-t border-gray-200"
+      >
+        <nav
+          class="flex flex-col px-4 py-4 space-y-2 text-sm uppercase font-semibold"
+        >
+          <a href="index.html" class="text-yellow-500">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <!-- Spacer for header height -->
+
+    <main>
+      <!-- Hero Section -->
+      <section class="relative bg-black text-white min-h-screen">
+        <!-- Background Image with Overlay -->
+        <img
+          src="https://res.cloudinary.com/temmarie/image/upload/v1747670803/young-students-learning-together-group-study_h6im0q.webp"
+          alt="Hero Background"
+          class="absolute inset-0 w-full h-full object-cover opacity-40"
+        />
+
+        <!-- Content -->
+        <div
+          class="relative z-10 flex flex-wrap justify-center lg:justify-start lg:flex-nowrap h-full px-6 lg:px-20 py-20"
+        >
+          <!-- Left Content -->
+          <div class="max-w-3xl lg:w-1/2 xl:w-2/5 flex flex-col justify-start">
+            <h2 class="text-yellow-400 text-3xl font-light mb-2">Solutions</h2>
+            <h1 class="text-2xl md:text-5xl font-light leading-tight mb-6">
+              What we have to offer<br />
+              for your next business<br />
+              and career success
+            </h1>
+            <p class="text-gray-300 mb-8">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <span class="text-white font-medium">
+                Utenim ad minim veniam quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </span>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum.
+            </p>
+          </div>
+          <!-- Feature Boxes -->
+          <div
+            class="lg:w-1/2 xl:w-3/5 lg:ml-10 flex items-start justify-center mt-0 lg:mt-8"
+          >
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl">
+              <!-- Box 1 -->
+              <div
+                class="slide-up-1 border-4 border-yellow-400 p-6 text-center max-h-max"
+              >
+                <h3 class="text-lg font-semibold text-white mb-2">Meet us</h3>
+                <p class="text-gray-300 text-sm mb-4">
+                  Artison ipsum dolor sit amet consectetur adip iscing
+                  ercipiscing elitsed do ullamco eiusitation.
+                </p>
+                <a href="#" class="text-yellow-400 underline text-sm"
+                  >Read more</a
+                >
+              </div>
+              <!-- Box 2 -->
+              <div
+                class="slide-up-2 border-4 border-yellow-400 p-6 text-center max-h-max"
+              >
+                <h3 class="text-lg font-semibold text-white mb-2">Solutions</h3>
+                <p class="text-gray-300 text-sm mb-4">
+                  Bortolo ipsum dolor sit amet consectetur adip iscing
+                  ercipiscing elitsed do eius itation arco.
+                </p>
+                <a href="#" class="text-yellow-400 underline text-sm"
+                  >Read more</a
+                >
+              </div>
+              <!-- Box 3 -->
+              <div
+                class="slide-up-3 border-4 border-yellow-400 p-6 text-center max-h-max"
+              >
+                <h3 class="text-lg font-semibold text-white mb-2">Benefits</h3>
+                <p class="text-gray-300 text-sm mb-4">
+                  Lorem ipsum dolor sit amet consectetur adip iscing ercipiscing
+                  elitsed do eiusitation ullamco.
+                </p>
+                <a href="#" class="text-yellow-400 underline text-sm"
+                  >Read more</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- about us -->
+      <section class="bg-gray-100 relative overflow-hidden">
+        <img
+          src="https://res.cloudinary.com/temmarie/image/upload/v1748248419/african-man-black-suit_tu3raq.webp"
+          alt="impact"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gray-300/90"></div>
+
+        <div
+          class="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10"
+        >
+          <!-- About Me (Left Column) -->
+          <div>
+            <p class="text-black text-sm">Our Story</p>
+            <h2 class="text-4xl font-semibold text-white mt-1 mb-4">
+              About Us
+            </h2>
+            <div class="w-24 h-1 bg-yellow-400 mb-6"></div>
+            <p class="text-black mb-4 leading-relaxed">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim
+              ad minim veniam quis nostrud exercitation ullamco laboris.
+            </p>
+            <p class="text-white font-semibold mb-8 leading-relaxed">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim
+              ad minim veniam quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat irure dolor in reprehende.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="#"
+                class="bg-yellow-500 text-white font-semibold px-6 py-3 hover:bg-yellow-600 transition-all"
+              >
+                Learn More
+              </a>
+              <a
+                href="#"
+                class="border border-yellow-500 text-yellow-500 px-6 py-3 font-semibold hover:bg-yellow-500 hover:text-white transition-all"
+              >
+                Contacts
+              </a>
+            </div>
+          </div>
+
+          <!-- Testimonials Carousel (Right Column) -->
+          <div
+            x-data="{ 
+  activeSlide: 0, 
+  slides: [
+    { 
+      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      name: 'Lore sito ameto consectetur.', 
+      text: 'Lorem ipsum dolor sit amet consectetur.' 
+    },
+    { 
+      image: 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      name: 'Lore sito ameto consectetur.', 
+      text: 'Lorem ipsum dolor sit amet consectetur.' 
+    },
+    { 
+      image: 'https://res.cloudinary.com/temmarie/image/upload/v1747598917/customer_l8ma44.webp', 
+      name: 'Lore sito ameto consectetur.', 
+      text: 'Lorem ipsum dolor sit amet consectetur.' 
+    },
+    { 
+      image: 'https://images.unsplash.com/photo-1603415526960-f7e0328b6a7c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      name: 'Lore sito ameto consectetur.', 
+      text: 'Lorem ipsum dolor sit amet consectetur.' 
+    },
+    { 
+      image: 'https://images.unsplash.com/photo-1522071820085-fe599b221376?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      name: 'Lore sito ameto consectetur.', 
+      text: 'Lorem ipsum dolor sit amet consectetur.' 
+    },
+    { 
+      image: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
+      name: 'Lore sito ameto consectetur.', 
+      text: 'Lorem ipsum dolor sit amet consectetur.' 
+    }
+  ],
+  next() { this.activeSlide = (this.activeSlide + 1) % this.slides.length; },
+  prev() { this.activeSlide = (this.activeSlide - 1 + this.slides.length) % this.slides.length; }
+}"
+            x-init="setInterval(() => next(), 5000)"
+            class="relative"
+          >
+            <div class="flex space-x-4 overflow-hidden">
+              <template x-for="(slide, index) in slides" :key="index">
+                <div
+                  x-show="activeSlide === index"
+                  x-transition
+                  class="min-w-full transition-all duration-700 ease-in-out"
+                >
+                  <div class="border-2 border-yellow-400 p-6 text-center">
+                    <img
+                      :src="slide.image"
+                      alt=""
+                      class="mx-auto mb-4 h-40 w-40 object-cover"
+                    />
+                    <div class="p-4 border-2">
+                      <h3
+                        class="text-yellow-500 text-sm font-semibold"
+                        x-text="slide.name"
+                      ></h3>
+                      <p
+                        class="text-gray-600 text-sm mt-1"
+                        x-text="slide.text"
+                      ></p>
+                    </div>
+                  </div>
+                </div>
+              </template>
+            </div>
+
+            <!-- Dots -->
+            <div class="absolute top-4 right-4 flex space-x-2">
+              <template x-for="(slide, i) in slides" :key="i">
+                <div
+                  :class="activeSlide === i ? 'bg-yellow-500' : 'bg-gray-300'"
+                  class="w-3 h-3 rounded-full cursor-pointer"
+                  @click="activeSlide = i"
+                ></div>
+              </template>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- services summary -->
+
+      <section class="relative bg-black mih-h-screen p-10">
+        <!-- Background Image with Overlay -->
+        <img
+          src="https://res.cloudinary.com/temmarie/image/upload/v1748248420/businessman-communication-company-meeting-concept_undpe8.webp"
+          alt="Hero Background"
+          class="absolute inset-0 w-full h-full object-cover opacity-40"
+        />
+        <!-- text content -->
+        <div class="relative z-10 text-center">
+          <h2 class="text-4xl text-white font-bold text-center mb-10">
+            What We Do at <span class="text-yellow-500">WeRep</span>
+          </h2>
+          <!-- top content -->
+          <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- card1 -->
+              <div class="px-6 py-12 border-2 border-white shadow-md">
+                <h3 class="text-lg font-semibold text-yellow-400 mb-2">
+                  Investment Facilitation
+                </h3>
+                <p class="text-white">
+                  Navigate UK business entry with expert guidance on location,
+                  staffing, compliance, and more.
+                </p>
+              </div>
+              <!-- card2 -->
+              <div class="overflow-hidden shadow-md">
+                <img
+                  src="https://res.cloudinary.com/temmarie/image/upload/v1747670803/young-students-learning-together-group-study_h6im0q.webp"
+                  alt="Hero Background"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- card3 -->
+              <div class="bg-yellow-400 text-black p-6 shadow-md px-6 py-12">
+                <h3 class="text-lg font-semibold mb-2">
+                  Operations Management
+                </h3>
+                <p>
+                  We act as your local team—handling logistics, vendors,
+                  deliveries, and in-country oversight.
+                </p>
+              </div>
+              <!-- card4 -->
+              <div class="bg-white text-yellow-400 p-6 shadow-md px-6 py-12">
+                <h4 class="text-lg font-semibold text-black mb-2">
+                  Events and Representation
+                </h4>
+
+                <p class="text-black">
+                  We attend events, seminars, and meetings on your
+                  behalf—ensuring your business is visible.
+                </p>
+              </div>
+            </div>
+
+            <hr class="border-t-1 border-gray-300 mt-12 mb-12" />
+          </div>
+
+          <div class="max-w-7xl mx-auto px-4">
+            <!-- Container for all cards -->
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-6 text-white"
+            >
+              <!-- Card 1: Passion -->
+              <div class="flex flex-row items-center space-x-4">
+                <i class="fa fa-heartbeat text-5xl text-white"></i>
+                <div class="w-1 h-24 bg-gray-400"></div>
+                <div class="text-left">
+                  <h4 class="text-lg font-semibold mb-1">Passion</h4>
+                  <p class="text-gray-300 text-sm">
+                    Duis aute irure dolor in reprehenderit dolore eu fugiat
+                    nulla pariatur.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 2: Dedication -->
+              <div class="flex flex-row items-center space-x-4">
+                <i class="fa fa-globe text-5xl text-white"></i>
+                <div class="w-1 h-24 bg-gray-400"></div>
+                <div class="text-left">
+                  <h4 class="text-lg font-semibold mb-1">Dedication</h4>
+                  <p class="text-gray-300 text-sm">
+                    Duis aute irure dolor in reprehenderit dolore eu fugiat
+                    nulla pariatur.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 3: Research -->
+              <div class="flex flex-row items-center space-x-4">
+                <i class="fa fa-flask text-5xl text-white"></i>
+                <div class="w-1 h-24 bg-gray-400"></div>
+                <div class="text-left">
+                  <h4 class="text-lg font-semibold mb-1">Research</h4>
+                  <p class="text-gray-300 text-sm">
+                    Duis aute irure dolor in reprehenderit dolore eu fugiat
+                    nulla pariatur.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 4: Safety -->
+              <div class="flex flex-row items-center space-x-4">
+                <i class="fa fa-shield text-5xl text-white"></i>
+                <div class="w-1 h-24 bg-gray-400"></div>
+                <div class="text-left">
+                  <h4 class="text-lg font-semibold mb-1">Safety</h4>
+                  <p class="text-gray-300 text-sm">
+                    Duis aute irure dolor in reprehenderit dolore eu fugiat
+                    nulla pariatur.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10 text-center">
+            <a
+              href="services.html"
+              class="inline-block border-2 border-yellow-400 px-6 py-2 text-sm text-white font-semibold hover:bg-yellow-400 transition"
+            >
+              View All Services
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="bg-yellow-400 text-black py-16 text-center">
+        <div class="max-w-2xl mx-auto px-4">
+          <h3 class="text-2xl font-bold mb-4">
+            Ready to Expand Your Business to the UK?
+          </h3>
+          <p class="mb-6">
+            Let WeRep be your reliable eyes, ears, and hands in the United
+            Kingdom. Get in touch today to get started.
+          </p>
+          <a
+            href="about.html#contact"
+            class="bg-black text-white px-6 py-2 font-semibold hover:bg-gray-800 transition"
+          >
+            Contact Us Now
+          </a>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16 border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <!-- Brand Description -->
+          <div class="space-y-4">
+            <div class="flex items-center space-x-4">
+              <div class="text-4xl font-bold text-yellow-400">WeRep</div>
+            </div>
+            <p class="text-white/70 text-sm">
+              WeRep connects talent with vision. Explore our creative journey
+              and let’s craft your next masterpiece together.
+            </p>
+            <div class="flex space-x-4 text-white/60">
+              <a href="#" class="hover:text-yellow-400">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="hover:text-yellow-400">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="hover:text-yellow-400">
+                <i class="fab fa-vimeo-v"></i>
+              </a>
+              <a href="#" class="hover:text-yellow-400">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2 text-white/70 text-sm">
+              <li><a href="#" class="hover:text-yellow-400">Home</a></li>
+              <li><a href="#" class="hover:text-yellow-400">Our Team</a></li>
+              <li><a href="#" class="hover:text-yellow-400">Portfolio</a></li>
+              <li><a href="#" class="hover:text-yellow-400">Blog</a></li>
+              <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Our Services</h4>
+            <ul class="space-y-2 text-white/70 text-sm">
+              <li><a href="#" class="hover:text-yellow-400">Photography</a></li>
+              <li><a href="#" class="hover:text-yellow-400">Videography</a></li>
+              <li><a href="#" class="hover:text-yellow-400">Editing</a></li>
+              <li>
+                <a href="#" class="hover:text-yellow-400">Brand Campaigns</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-yellow-400">Creative Direction</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Contact</h4>
+            <ul class="space-y-4 text-white/70 text-sm">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-map-marker-alt mt-1 text-yellow-400"></i>
+                456 Studio Ave, Lagos, Nigeria
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-phone-alt text-yellow-400"></i>
+                +234 800 000 0000
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-envelope text-yellow-400"></i>
+                hello@werep.ng
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div
+          class="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between"
+        >
+          <p class="text-white/50 text-sm">
+            &copy; <span id="current-year"></span> WeRep. All rights reserved.
+          </p>
+          <div class="flex space-x-4 mt-4 md:mt-0 text-white/50 text-sm">
+            <a href="#" class="hover:text-yellow-400">Privacy Policy</a>
+            <a href="#" class="hover:text-yellow-400">Terms</a>
+            <a href="#" class="hover:text-yellow-400">Cookies</a>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        document.getElementById("current-year").textContent =
+          new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
+</html>
