@@ -73,7 +73,7 @@
     <main>
       <div class="mt-10"></div>
       <!-- Hero Section -->
-      <section class="relative bg-black text-white p-48">
+      <section class="relative bg-black text-white p-40">
         <!-- Background Image with Overlay -->
         <img
           src="https://res.cloudinary.com/temmarie/image/upload/v1748293473/african-business-male-people-shaking-hands_axnpnp.webp"
@@ -161,6 +161,7 @@
       </section>
 
       <!-- about us -->
+
       <section class="bg-gray-100 relative overflow-hidden">
         <img
           src="https://res.cloudinary.com/temmarie/image/upload/v1748248419/african-man-black-suit_tu3raq.webp"
@@ -168,11 +169,10 @@
           class="absolute inset-0 w-full h-full object-cover"
         />
         <div class="absolute inset-0 bg-gray-300/90"></div>
-
         <div
           class="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10"
         >
-          <!-- About Me (Left Column) -->
+          <!-- About Us (Left Column) -->
           <div>
             <p class="text-black text-sm">Our Story</p>
             <h2 class="text-4xl font-semibold text-white mt-1 mb-4">
@@ -180,15 +180,14 @@
             </h2>
             <div class="w-24 h-1 bg-yellow-400 mb-6"></div>
             <p class="text-black mb-4 leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim
-              ad minim veniam quis nostrud exercitation ullamco laboris.
+              At WeRep, we provide expert business support services to help
+              businesses thrive in the UK market. Our team of experts offers
+              tailored solutions to meet your unique needs.
             </p>
             <p class="text-white font-semibold mb-8 leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim
-              ad minim veniam quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat irure dolor in reprehende.
+              From logistics and investment facilitation to business
+              representation, we've got you covered. Our mission is to empower
+              businesses to succeed in the UK market.
             </p>
             <div class="flex flex-wrap gap-4">
               <a
@@ -205,46 +204,16 @@
               </a>
             </div>
           </div>
-
           <!-- Testimonials Carousel (Right Column) -->
           <div
-            x-data="{ 
-  activeSlide: 0, 
-  slides: [
-    { 
-      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
-      name: 'Lore sito ameto consectetur.', 
-      text: 'Lorem ipsum dolor sit amet consectetur.' 
-    },
-    { 
-      image: 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
-      name: 'Lore sito ameto consectetur.', 
-      text: 'Lorem ipsum dolor sit amet consectetur.' 
-    },
-    { 
-      image: 'https://res.cloudinary.com/temmarie/image/upload/v1747598917/customer_l8ma44.webp', 
-      name: 'Lore sito ameto consectetur.', 
-      text: 'Lorem ipsum dolor sit amet consectetur.' 
-    },
-    { 
-      image: 'https://images.unsplash.com/photo-1603415526960-f7e0328b6a7c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
-      name: 'Lore sito ameto consectetur.', 
-      text: 'Lorem ipsum dolor sit amet consectetur.' 
-    },
-    { 
-      image: 'https://images.unsplash.com/photo-1522071820085-fe599b221376?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
-      name: 'Lore sito ameto consectetur.', 
-      text: 'Lorem ipsum dolor sit amet consectetur.' 
-    },
-    { 
-      image: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', 
-      name: 'Lore sito ameto consectetur.', 
-      text: 'Lorem ipsum dolor sit amet consectetur.' 
-    }
-  ],
-  next() { this.activeSlide = (this.activeSlide + 1) % this.slides.length; },
-  prev() { this.activeSlide = (this.activeSlide - 1 + this.slides.length) % this.slides.length; }
-}"
+            x-data="{ activeSlide: 0, slides: [
+      { name: 'John Doe', text: 'WeRep has been instrumental in helping our business navigate the complexities of the UK market.' },
+      { name: 'Jane Smith', text: 'The team at WeRep is knowledgeable and professional. They have helped us streamline our logistics operations.' },
+      { name: 'Bob Johnson', text: 'WeRep has provided us with expert guidance and support throughout our business journey in the UK.' },
+      { name: 'Alice Brown', text: 'The business representation services offered by WeRep have been invaluable to our company.' },
+      { name: 'Mike Davis', text: 'WeRep has helped us identify new opportunities and navigate the UK market with confidence.' },
+      { name: 'Emily Taylor', text: 'The team at WeRep is responsive and proactive. They have helped us overcome numerous challenges.' }
+    ], next() { this.activeSlide = (this.activeSlide + 1) % this.slides.length; }, prev() { this.activeSlide = (this.activeSlide - 1 + this.slides.length) % this.slides.length; } }"
             x-init="setInterval(() => next(), 5000)"
             class="relative"
           >
@@ -255,27 +224,19 @@
                   x-transition
                   class="min-w-full transition-all duration-700 ease-in-out"
                 >
-                  <div class="border-2 border-yellow-400 p-6 text-center">
-                    <img
-                      :src="slide.image"
-                      alt=""
-                      class="mx-auto mb-4 h-40 w-40 object-cover"
-                    />
-                    <div class="p-4 border-2">
-                      <h3
-                        class="text-yellow-500 text-sm font-semibold"
-                        x-text="slide.name"
-                      ></h3>
-                      <p
-                        class="text-gray-600 text-sm mt-1"
-                        x-text="slide.text"
-                      ></p>
-                    </div>
+                  <div class="border-4 border-yellow-400 p-6 text-center">
+                    <h3
+                      class="text-yellow-500 text-lg font-semibold"
+                      x-text="slide.name"
+                    ></h3>
+                    <p
+                      class="text-gray-600 text-md mt-1"
+                      x-text="slide.text"
+                    ></p>
                   </div>
                 </div>
               </template>
             </div>
-
             <!-- Dots -->
             <div class="absolute top-4 right-4 flex space-x-2">
               <template x-for="(slide, i) in slides" :key="i">
@@ -412,7 +373,7 @@
 
           <div class="mt-10 text-center">
             <a
-              href="services.html"
+              href="about.html#services"
               class="inline-block border-2 border-yellow-400 px-6 py-2 text-sm text-white font-semibold hover:bg-yellow-400 transition"
             >
               View All Services
