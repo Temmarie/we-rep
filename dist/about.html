@@ -19,9 +19,7 @@
   </head>
 
   <body class="bg-white text-gray-900 font-sans">
-  
-  
-      <header
+    <header
       x-data="{ mobileOpen: false, lastScrollY: window.scrollY, hidden: false, handleScroll() { if (window.scrollY > this.lastScrollY && window.scrollY > 50) { this.hidden = true; } else { this.hidden = false; } this.lastScrollY = window.scrollY; } }"
       x-init="window.addEventListener('scroll', () => handleScroll())"
       class="fixed top-0 left-0 w-full z-50"
@@ -66,9 +64,7 @@
         </div>
       </div>
     </header>
-  
-  
-  
+
     <main>
       <!-- Hero Section -->
       <section
@@ -131,21 +127,31 @@
 
       <!-- about us section -->
 
-      <section class="py-32 bg-gray-200">
-        <div class="mx-auto px-4 max-w-7xl">
-          <div class="grid grid-cols-1 lg:grid-cols-3  gap-6">
-            <!-- 1paragraph -->
+      <section class="bg-gray-100 relative overflow-hidden py-32">
+        <!-- Background Image -->
+        <img
+          src="https://res.cloudinary.com/temmarie/image/upload/v1748248419/young-family-buying-car-dealer_f84fz0.webp"
+          alt="impact"
+          class="absolute inset-0 w-full h-full object-cover z-0"
+        />
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gray-300/90 z-0"></div>
+
+        <!-- Content Wrapper -->
+        <div class="relative z-10 mx-auto px-4 max-w-7xl">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Column 1 -->
             <div>
               <h4 class="text-gray-400">Key Values</h4>
               <h2 class="text-black text-4xl capitalize">About our company</h2>
-              <hr class="border-t-3 border-yellow-400 mt-4 mb-6" />
-
-              <p class="text-gray-700 text-justify">
+              <hr class="border-t-4 border-yellow-400 mt-4 mb-6" />
+              <p class="text-gray-700 text-justify mb-4">
                 We are a UK-based business support and representation company
                 dedicated to making your operations or trip in the UK seamless,
                 more efficient, and cost-effective. We strategically connect
                 clients to resources, people, and systems they can trust.
-                <div class="mb-3"> </div>
+              </p>
+              <p class="text-gray-700 text-justify">
                 With our versatility and local know-how, we will effectively
                 represent you in the UK, streamlining your business processes
                 and reducing bureaucratic bottlenecks. Whether you're looking to
@@ -155,216 +161,269 @@
               </p>
             </div>
 
+            <!-- Column 2 -->
             <div class="text-gray-700 text-justify">
-              Our team is made up of dependable and result-driven professionals who are
-              committed to delivering value-adding solutions that meet your
-              specific needs. From investment facilitation to operation
-              management, training and professional development, events and
-              seminar representation, as well as goods and product inspection, we have
-              the expertise and experience to handle it all. 
-               <div class="mb-3"> </div>
-              With over 30 years
-              of experience in multimodal shipping and logistics, we are
-              confident in our ability to provide top-notch services that will
-              help you achieve your goals in the UK. <b>Let us be your UK partner
-              and grow together - contact us today to learn more about how we
-              can support your business.</b>
- <div class="mb-3"> </div>
+              <p class="mb-4">
+                Our team is made up of dependable and result-driven
+                professionals who are committed to delivering value-adding
+                solutions that meet your specific needs. From investment
+                facilitation to operation management, training and professional
+                development, events and seminar representation, as well as goods
+                and product inspection, we have the expertise and experience to
+                handle it all.
+              </p>
+              <p class="mb-4">
+                With over 30 years of experience in multimodal shipping and
+                logistics, we are confident in our ability to provide top-notch
+                services that will help you achieve your goals in the UK.
+                <strong
+                  >Let us be your UK partner and grow together - contact us
+                  today to learn more about how we can support your
+                  business.</strong
+                >
+              </p>
               <a
                 href="#"
-                class="border border-yellow-500 text-yellow-500 px-6 py-3 font-semibold hover:bg-yellow-500 hover:text-white transition-all"
+                class="inline-block border-3 border-yellow-400 text-white px-6 py-3 font-semibold hover:bg-yellow-400 hover:text-white transition-all"
               >
                 Contact Us
               </a>
-             
-          
-              </div>
-
-                          <div class="">
-              <div class="max-w-4xl mx-auto text-center">
-                <!-- Decorative Opening Quote Mark -->
-                <div
-                  class="text-7xl font-serif italic text-yellow-500 mb-4 select-none"
-                >
-                  ❝
-                </div>
-
-                <!-- Quote Text -->
-                <blockquote
-                  class="text-2xl md:text-3xl text-gray-800 font-light leading-relaxed"
-                >
-                  Success in business is all about making the right connections.
-                </blockquote>
-
-                <!-- Author -->
-                <footer
-                  class="mt-6 text-sm text-gray-600 font-semibold tracking-wide uppercase"
-                >
-                  — Richard Branson
-                </footer>
-
-                <!-- Decorative Closing Quote Mark -->
-                <div
-                  class="text-7xl font-serif italic text-yellow-500 mt-4 rotate-180 select-none"
-                >
-                  ❝
-                </div>
-              </div>
-            </div>
-              
             </div>
 
-
+            <!-- Column 3: Quote -->
+            <div class="text-center">
+              <div
+                class="text-7xl font-serif italic text-yellow-500 mb-4 select-none"
+              >
+                ❝
+              </div>
+              <blockquote
+                class="text-2xl md:text-3xl text-gray-800 font-light leading-relaxed"
+              >
+                Success in business is all about making the right connections.
+              </blockquote>
+              <footer
+                class="mt-6 text-sm text-gray-600 font-semibold tracking-wide uppercase"
+              >
+                — Richard Branson
+              </footer>
+              <div
+                class="text-7xl font-serif italic text-yellow-500 mt-4 rotate-180 select-none"
+              >
+                ❝
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- About Section -->
-   <!-- Services Section -->
-
-   <!-- Services Section with Background Image and Overlay -->
-<section class="relative py-4" id="services">
-  <!-- Background Image -->
-    <img
+      <!-- Services Section with Background Image and Overlay -->
+      <section class="relative py-4" id="services">
+        <!-- Background Image -->
+        <img
           src="https://res.cloudinary.com/temmarie/image/upload/v1748248419/african-man-black-suit_tu3raq.webp"
           alt="impact"
           class="absolute inset-0 w-full h-full object-cover"
         />
         <div class="absolute inset-0 bg-black/60"></div>
 
-  <!-- Content -->
-  <div class="relative z-10 max-w-7xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center text-white mb-6">Our Services</h2>
-    <div
-              class="bg-yellow-400 relative mb-10 bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 rounded-full"
-            ></div>
-    <p class="text-lg text-white text-center max-w-3xl mx-auto mb-12">
-      At <strong>WeRep</strong>, we deliver end-to-end representation for your business in the UK—so you can make impact without being physically present. From logistics to legal, training to product inspections, we handle it all.
-    </p>
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center text-white mb-6">
+            Our Services
+          </h2>
+          <div
+            class="bg-yellow-400 relative mb-10 bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 rounded-full"
+          ></div>
+          <p class="text-lg text-white text-center max-w-3xl mx-auto mb-12">
+            At <strong>WeRep</strong>, we deliver end-to-end representation for
+            your business in the UK—so you can make impact without being
+            physically present. From logistics to legal, training to product
+            inspections, we handle it all.
+          </p>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Card -->
-      <div class="border-2 border-white bg-opacity-90 backdrop-blur-md  shadow-md p-6 hover:shadow-lg transition">
-        <div class="text-yellow-500 text-4xl mb-4">
-          <i class="fas fa-briefcase"></i>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card -->
+            <div
+              class="border-2 border-white bg-opacity-90 backdrop-blur-md shadow-md p-6 hover:shadow-lg transition"
+            >
+              <div class="text-yellow-500 text-4xl mb-4">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">
+                Investment Facilitation
+              </h3>
+              <p class="text-white">
+                From research to grand opening, we help launch or expand your UK
+                business—handling logistics, compliance, and recruitment.
+              </p>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="bg-white bg-opacity-90 backdrop-blur-md shadow-md p-6 hover:shadow-lg transition"
+            >
+              <div class="text-yellow-500 text-4xl mb-4">
+                <i class="fas fa-truck-moving"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Operations & Logistics
+              </h3>
+              <p class="text-gray-600">
+                Keep operations running without flying in. We manage vendors,
+                compliance, and day-to-day logistics expertly.
+              </p>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="bg-white bg-opacity-90 backdrop-blur-md shadow-md p-6 hover:shadow-lg transition"
+            >
+              <div class="text-yellow-500 text-4xl mb-4">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Training & Development
+              </h3>
+              <p class="text-gray-600">
+                We handle every training detail—from airport pickup to course
+                coordination—for your team’s development.
+              </p>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="bg-white bg-opacity-90 backdrop-blur-md shadow-md p-6 hover:shadow-lg transition"
+            >
+              <div class="text-yellow-500 text-4xl mb-4">
+                <i class="fas fa-microphone-alt"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Event Representation
+              </h3>
+              <p class="text-gray-600">
+                Representing your brand at events or launching seminars on your
+                behalf—flawless execution guaranteed.
+              </p>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="bg-yellow-400 bg-opacity-90 backdrop-blur-md shadow-md p-6 hover:shadow-lg transition"
+            >
+              <div class="text-black text-4xl mb-4">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Meetings & Conferences
+              </h3>
+              <p class="text-black">
+                We attend, report, and advocate on your behalf at key UK
+                meetings or conferences.
+              </p>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="bg-white bg-opacity-90 backdrop-blur-md shadow-md p-6 hover:shadow-lg transition"
+            >
+              <div class="text-yellow-500 text-4xl mb-4">
+                <i class="fas fa-box-open"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Product Inspection
+              </h3>
+              <p class="text-gray-600">
+                We perform detailed visual inspections (live or recorded) to
+                ensure your satisfaction before approval or shipping.
+              </p>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="bg-white bg-opacity-90 backdrop-blur-md shadow-md p-6 hover:shadow-lg transition"
+            >
+              <div class="text-yellow-500 text-4xl mb-4">
+                <i class="fas fa-warehouse"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Warehousing & Storage
+              </h3>
+              <p class="text-gray-600">
+                We provide secure, scalable storage across the UK tailored to
+                your distribution and budget needs.
+              </p>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="bg-white bg-opacity-90 backdrop-blur-md shadow-md p-6 hover:shadow-lg transition"
+            >
+              <div class="text-yellow-500 text-4xl mb-4">
+                <i class="fas fa-dolly"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Cargo Clearance & Delivery
+              </h3>
+              <p class="text-gray-600">
+                Full-service customs clearance, delivery or
+                forwarding—compliant, timely, and stress-free.
+              </p>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="border-2 border-white bg-opacity-90 backdrop-blur-md shadow-md p-6 hover:shadow-lg transition"
+            >
+              <div class="text-yellow-500 text-4xl mb-4">
+                <i class="fas fa-shopping-bag"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">
+                Personal Shopper
+              </h3>
+              <p class="text-white">
+                Whether luxury or essentials, we purchase as instructed and
+                deliver internationally, discreetly and securely.
+              </p>
+            </div>
+          </div>
         </div>
-        <h3 class="text-xl font-semibold text-white mb-2">Investment Facilitation</h3>
-        <p class="text-white">
-          From research to grand opening, we help launch or expand your UK business—handling logistics, compliance, and recruitment.
-        </p>
-      </div>
-
-      <!-- Card -->
-      <div class="bg-white bg-opacity-90 backdrop-blur-md  shadow-md p-6 hover:shadow-lg transition">
-        <div class="text-yellow-500 text-4xl mb-4">
-          <i class="fas fa-truck-moving"></i>
-        </div>
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Operations & Logistics</h3>
-        <p class="text-gray-600">
-          Keep operations running without flying in. We manage vendors, compliance, and day-to-day logistics expertly.
-        </p>
-      </div>
-
-      <!-- Card -->
-      <div class="bg-white bg-opacity-90 backdrop-blur-md  shadow-md p-6 hover:shadow-lg transition">
-        <div class="text-yellow-500 text-4xl mb-4">
-          <i class="fas fa-chalkboard-teacher"></i>
-        </div>
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Training & Development</h3>
-        <p class="text-gray-600">
-          We handle every training detail—from airport pickup to course coordination—for your team’s development.
-        </p>
-      </div>
-
-      <!-- Card -->
-      <div class="bg-white bg-opacity-90 backdrop-blur-md  shadow-md p-6 hover:shadow-lg transition">
-        <div class="text-yellow-500 text-4xl mb-4">
-          <i class="fas fa-microphone-alt"></i>
-        </div>
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Event Representation</h3>
-        <p class="text-gray-600">
-          Representing your brand at events or launching seminars on your behalf—flawless execution guaranteed.
-        </p>
-      </div>
-
-      <!-- Card -->
-      <div class="bg-yellow-400 bg-opacity-90 backdrop-blur-md  shadow-md p-6 hover:shadow-lg transition">
-        <div class="text-black text-4xl mb-4">
-          <i class="fas fa-users"></i>
-        </div>
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Meetings & Conferences</h3>
-        <p class="text-black">
-          We attend, report, and advocate on your behalf at key UK meetings or conferences.
-        </p>
-      </div>
-
-      <!-- Card -->
-      <div class="bg-white bg-opacity-90 backdrop-blur-md  shadow-md p-6 hover:shadow-lg transition">
-        <div class="text-yellow-500 text-4xl mb-4">
-          <i class="fas fa-box-open"></i>
-        </div>
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Product Inspection</h3>
-        <p class="text-gray-600">
-          We perform detailed visual inspections (live or recorded) to ensure your satisfaction before approval or shipping.
-        </p>
-      </div>
-
-      <!-- Card -->
-      <div class="bg-white bg-opacity-90 backdrop-blur-md  shadow-md p-6 hover:shadow-lg transition">
-        <div class="text-yellow-500 text-4xl mb-4">
-          <i class="fas fa-warehouse"></i>
-        </div>
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Warehousing & Storage</h3>
-        <p class="text-gray-600">
-          We provide secure, scalable storage across the UK tailored to your distribution and budget needs.
-        </p>
-      </div>
-
-      <!-- Card -->
-      <div class="bg-white bg-opacity-90 backdrop-blur-md  shadow-md p-6 hover:shadow-lg transition">
-        <div class="text-yellow-500 text-4xl mb-4">
-          <i class="fas fa-dolly"></i>
-        </div>
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Cargo Clearance & Delivery</h3>
-        <p class="text-gray-600">
-          Full-service customs clearance, delivery or forwarding—compliant, timely, and stress-free.
-        </p>
-      </div>
-
-      <!-- Card -->
-      <div class="border-2 border-white bg-opacity-90 backdrop-blur-md  shadow-md p-6 hover:shadow-lg transition">
-        <div class="text-yellow-500 text-4xl mb-4">
-          <i class="fas fa-shopping-bag"></i>
-        </div>
-        <h3 class="text-xl font-semibold text-white mb-2">Personal Shopper</h3>
-        <p class="text-white">
-          Whether luxury or essentials, we purchase as instructed and deliver internationally, discreetly and securely.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+      </section>
 
       <!-- CTA Section -->
 
- <section class="py-24 bg-gray-300">
-  <div class="mx-auto max-w-7xl px-4">
-    <div class="flex">
-      <div class="text-black text-center p-12 md:col-span-2">
-        <div class="">
-          <h3 class="text-2xl font-bold mb-4">Unlock Your Business Potential in the UK</h3>
-          <p class="mb-6">Partner with WeRep and experience seamless business expansion, expert logistics, and personalized support. Let's get started on your UK journey!</p>
-          <a href="about.html#contact" class="bg-yellow-400 text-black px-6 py-2 font-semibold hover:border-2 hover:border-yellow-400 transition">Get Your UK Business Boost Today</a>
+      <section class="bg-gray-100 relative overflow-hidden py-10">
+        <!-- Background Image -->
+        <img
+          src="https://res.cloudinary.com/temmarie/image/upload/v1748248419/young-african-businessman-businessman-shaking-hand-front-glass-window_bwrmlf.webp"
+          alt="impact"
+          class="absolute inset-0 w-full h-full object-cover z-0"
+        />
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gray-300/90 z-0"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 mx-auto max-w-7xl px-4">
+          <div class="flex justify-center">
+            <div class="text-black text-center p-12 max-w-2xl">
+              <h3 class="text-3xl md:text-4xl font-bold mb-6">
+                Unlock Your Business Potential in the UK
+              </h3>
+              <p class="text-lg mb-8">
+                Partner with WeRep and experience seamless business expansion,
+                expert logistics, and personalized support. Let's get started on
+                your UK journey!
+              </p>
+              <a
+                href="about.html#contact"
+                class="inline-block bg-yellow-400 text-black px-6 py-3 font-semibold hover:border-2 hover:border-yellow-400 hover:bg-transparent hover:text-yellow-500 transition-all"
+              >
+                Get Your UK Business Boost Today
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
+      </section>
     </main>
 
     <!-- Footer -->
@@ -475,7 +534,6 @@
           new Date().getFullYear();
       </script>
     </footer>
-
 
     <script src="assets/js/script.js"></script>
   </body>

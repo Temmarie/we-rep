@@ -83,17 +83,17 @@
 
         <!-- Content -->
         <div
-          class="relative z-10 flex flex-wrap justify-center lg:justify-start lg:flex-nowrap h-full px-6 lg:px-20 py-20"
+          class="relative z-10 flex flex-wrap justify-center lg:justify-start lg:flex-nowrap h-full px-4"
         >
           <!-- Left Content -->
           <div class="max-w-3xl lg:w-1/2 xl:w-2/5 flex flex-col justify-start">
             <h2 class="text-yellow-400 text-3xl font-bold mb-2">WeRep</h2>
-            <h1 class="text-2xl md:text-5xl font-light leading-tight mb-6">
-              Expert Business Support in the UK
+            <h1 class="text-2xl md:text-4xl font-light leading-tight mb-6">
+              Innovative Uk Business Facilitators
             </h1>
             <p class="text-white mb-8">
-              At WeRep, we provide comprehensive business support services to
-              help businesses thrive in the UK market. Our team of experts
+              At WeRep, we provide comprehensive business facilitation services
+              to help businesses thrive in the UK market. Our team of experts
               offers tailored solutions to meet your unique needs.
               <span class="text-white font-medium">
                 From logistics and investment facilitation to business
@@ -110,10 +110,10 @@
             >
               <!-- Box 1 -->
               <div
-                class="slide-up-1 border-4 border-yellow-400 p-6 text-center max-h-max"
+                class="slide-up-1 border-4 border-yellow-400 p-6 text-center min-w-[30px]"
               >
                 <h3 class="text-lg font-semibold text-white mb-2">About us</h3>
-                <p class="text-gray-300 text-sm mb-4">
+                <p class="text-gray-300 text-sm mb-4 text-center">
                   Learn more about our mission, vision, and values. Discover how
                   we can help your business succeed in the UK.
                 </p>
@@ -123,7 +123,7 @@
               </div>
               <!-- Box 2 -->
               <div
-                class="slide-up-2 border-4 border-yellow-400 p-6 text-center max-h-max"
+                class="slide-up-2 border-4 border-yellow-400 p-6 text-center min-w-[30px]"
               >
                 <h3 class="text-lg font-semibold text-white mb-2">
                   Our Services
@@ -141,7 +141,7 @@
               </div>
               <!-- Box 3 -->
               <div
-                class="slide-up-3 border-4 border-yellow-400 p-6 text-center max-h-max"
+                class="slide-up-3 border-4 border-yellow-400 p-6 text-center min-w-[30px]"
               >
                 <h3 class="text-lg font-semibold text-white mb-2">Benefits</h3>
                 <p class="text-gray-300 text-sm mb-4">
@@ -164,27 +164,27 @@
 
       <section class="bg-gray-100 relative overflow-hidden">
         <img
-          src="https://res.cloudinary.com/temmarie/image/upload/v1748248419/african-man-black-suit_tu3raq.webp"
+          src="https://res.cloudinary.com/temmarie/image/upload/v1748248419/young-family-buying-car-dealer_f84fz0.webp"
           alt="impact"
           class="absolute inset-0 w-full h-full object-cover"
         />
         <div class="absolute inset-0 bg-gray-300/90"></div>
         <div
-          class="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10"
+          class="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 lg:grid-cols-3 gap-12 items-center relative z-10"
         >
           <!-- About Us (Left Column) -->
-          <div>
-            <p class="text-black text-sm">Our Story</p>
+          <div class="col-span-1 lg:col-span-1">
+            <p class="text-gray-700 text-sm">Our Story</p>
             <h2 class="text-4xl font-semibold text-white mt-1 mb-4">
               About Us
             </h2>
             <div class="w-24 h-1 bg-yellow-400 mb-6"></div>
-            <p class="text-black mb-4 leading-relaxed">
-              At WeRep, we provide expert business support services to help
-              businesses thrive in the UK market. Our team of experts offers
-              tailored solutions to meet your unique needs.
+            <p class="text-gray-700 mb-4 leading-relaxed">
+              At WeRep, we provide innovative business facilitation services to
+              help businesses thrive in the UK market. Our team of experts
+              offers tailored solutions to meet your unique needs.
             </p>
-            <p class="text-white font-semibold mb-8 leading-relaxed">
+            <p class="text-gray-700 font-semibold mb-8 leading-relaxed">
               From logistics and investment facilitation to business
               representation, we've got you covered. Our mission is to empower
               businesses to succeed in the UK market.
@@ -198,55 +198,78 @@
               </a>
               <a
                 href="#"
-                class="border border-yellow-500 text-yellow-500 px-6 py-3 font-semibold hover:bg-yellow-500 hover:text-white transition-all"
+                class="border-2 border-yellow-400 text-white px-6 py-3 font-semibold hover:bg-yellow-400 hover:text-white transition-all"
               >
                 Contact Us
               </a>
             </div>
           </div>
+
+
           <!-- Testimonials Carousel (Right Column) -->
-          <div
-            x-data="{ activeSlide: 0, slides: [
+
+         
+  <div
+  x-data="{
+    activeSlide: 0,
+    slides: [
       { name: 'John Doe', text: 'WeRep has been instrumental in helping our business navigate the complexities of the UK market.' },
       { name: 'Jane Smith', text: 'The team at WeRep is knowledgeable and professional. They have helped us streamline our logistics operations.' },
       { name: 'Bob Johnson', text: 'WeRep has provided us with expert guidance and support throughout our business journey in the UK.' },
       { name: 'Alice Brown', text: 'The business representation services offered by WeRep have been invaluable to our company.' },
       { name: 'Mike Davis', text: 'WeRep has helped us identify new opportunities and navigate the UK market with confidence.' },
       { name: 'Emily Taylor', text: 'The team at WeRep is responsive and proactive. They have helped us overcome numerous challenges.' }
-    ], next() { this.activeSlide = (this.activeSlide + 1) % this.slides.length; }, prev() { this.activeSlide = (this.activeSlide - 1 + this.slides.length) % this.slides.length; } }"
-            x-init="setInterval(() => next(), 5000)"
-            class="relative"
-          >
-            <div class="flex space-x-4 overflow-hidden">
-              <template x-for="(slide, index) in slides" :key="index">
-                <div
-                  x-show="activeSlide === index"
-                  x-transition
-                  class="min-w-full transition-all duration-700 ease-in-out"
-                >
-                  <div class="border-4 border-yellow-400 p-6 text-center">
-                    <h3
-                      class="text-yellow-500 text-lg font-semibold"
-                      x-text="slide.name"
-                    ></h3>
-                    <p
-                      class="text-gray-600 text-md mt-1"
-                      x-text="slide.text"
-                    ></p>
-                  </div>
-                </div>
-              </template>
-            </div>
-            <!-- Dots -->
-            <div class="absolute top-4 right-4 flex space-x-2">
-              <template x-for="(slide, i) in slides" :key="i">
-                <div
-                  :class="activeSlide === i ? 'bg-yellow-500' : 'bg-gray-300'"
-                  class="w-3 h-3 rounded-full cursor-pointer"
-                  @click="activeSlide = i"
-                ></div>
-              </template>
-            </div>
+    ],
+    next() {
+      this.activeSlide = (this.activeSlide + 2) % this.slides.length;
+    },
+    prev() {
+      this.activeSlide = (this.activeSlide - 2 + this.slides.length) % this.slides.length;
+    },
+    get visibleSlides() {
+      // Handles wrapping around if at end of array
+      return this.slides.slice(this.activeSlide, this.activeSlide + 2).concat(
+        this.activeSlide + 2 > this.slides.length ? this.slides.slice(0, (this.activeSlide + 2) % this.slides.length) : []
+      );
+    }
+  }"
+  x-init="setInterval(() => next(), 5000)"
+  class="relative col-span-1 lg:col-span-2"
+>
+  <div class="flex space-x-4 overflow-hidden">
+    <template x-for="(slide, index) in visibleSlides" :key="index">
+      <div
+        x-transition
+        class="min-w-[300px] transition-all duration-700 ease-in-out"
+      >
+        <div
+          class="border-4 border-yellow-400 p-6 w-[300px] h-[200px] text-center overflow-y-auto"
+        >
+          <h3
+            class="text-yellow-500 text-lg font-semibold"
+            x-text="slide.name"
+          ></h3>
+          <p
+            class="text-gray-600 text-md mt-1"
+            x-text="slide.text"
+          ></p>
+        </div>
+      </div>
+    </template>
+  </div>
+
+  <!-- Dots -->
+  <div class="absolute bottom-8 right-4 flex space-x-2">
+    <template x-for="(slide, i) in slides" :key="i">
+      <div
+        :class="Math.floor(activeSlide / 2) === Math.floor(i / 2) ? 'bg-yellow-500' : 'bg-gray-300'"
+        class="w-3 h-3 rounded-full cursor-pointer"
+        @click="activeSlide = i - (i % 2)"
+      ></div>
+    </template>
+  </div>
+</div>
+
           </div>
         </div>
       </section>
@@ -281,7 +304,7 @@
               <!-- card2 -->
               <div class="overflow-hidden shadow-md">
                 <img
-                  src="https://res.cloudinary.com/temmarie/image/upload/v1747670803/young-students-learning-together-group-study_h6im0q.webp"
+                  src="https://res.cloudinary.com/temmarie/image/upload/v1748248419/young-family-buying-car-dealer_f84fz0.webp"
                   alt="Hero Background"
                   class="w-full h-full object-cover"
                 />
@@ -320,12 +343,13 @@
               <!-- Card 1: Passion -->
               <div class="flex flex-row items-center space-x-4">
                 <i class="fa fa-heartbeat text-5xl text-white"></i>
-                <div class="w-1 h-24 bg-gray-400"></div>
+                <div class="w-1 h-36 bg-gray-400"></div>
                 <div class="text-left">
-                  <h4 class="text-lg font-semibold mb-1">Passion</h4>
+                  <h4 class="text-lg font-semibold mb-1">Innovation</h4>
                   <p class="text-gray-300 text-sm">
-                    Duis aute irure dolor in reprehenderit dolore eu fugiat
-                    nulla pariatur.
+                    Embracing creativity and new ideas to drive growth and
+                    success. Our team is passionate about delivering innovative
+                    solutions that exceed expectations
                   </p>
                 </div>
               </div>
@@ -333,12 +357,13 @@
               <!-- Card 2: Dedication -->
               <div class="flex flex-row items-center space-x-4">
                 <i class="fa fa-globe text-5xl text-white"></i>
-                <div class="w-1 h-24 bg-gray-400"></div>
+                <div class="w-1 h-36 bg-gray-400"></div>
                 <div class="text-left">
-                  <h4 class="text-lg font-semibold mb-1">Dedication</h4>
+                  <h4 class="text-lg font-semibold mb-1">Excellence</h4>
                   <p class="text-gray-300 text-sm">
-                    Duis aute irure dolor in reprehenderit dolore eu fugiat
-                    nulla pariatur.
+                    Committing to deliver high-quality results and exceptional
+                    service. We're dedicated to building strong relationships
+                    and driving business success.
                   </p>
                 </div>
               </div>
@@ -346,12 +371,13 @@
               <!-- Card 3: Research -->
               <div class="flex flex-row items-center space-x-4">
                 <i class="fa fa-flask text-5xl text-white"></i>
-                <div class="w-1 h-24 bg-gray-400"></div>
+                <div class="w-1 h-36 bg-gray-400"></div>
                 <div class="text-left">
-                  <h4 class="text-lg font-semibold mb-1">Research</h4>
+                  <h4 class="text-lg font-semibold mb-1">Curiosity</h4>
                   <p class="text-gray-300 text-sm">
-                    Duis aute irure dolor in reprehenderit dolore eu fugiat
-                    nulla pariatur.
+                    Fostering a culture of continuous learning and exploration.
+                    Our team stays up-to-date with industry trends and best
+                    practices to drive informed decision-making.
                   </p>
                 </div>
               </div>
@@ -359,12 +385,13 @@
               <!-- Card 4: Safety -->
               <div class="flex flex-row items-center space-x-4">
                 <i class="fa fa-shield text-5xl text-white"></i>
-                <div class="w-1 h-24 bg-gray-400"></div>
+                <div class="w-1 h-36 bg-gray-400"></div>
                 <div class="text-left">
-                  <h4 class="text-lg font-semibold mb-1">Safety</h4>
+                  <h4 class="text-lg font-semibold mb-1">Integrity</h4>
                   <p class="text-gray-300 text-sm">
-                    Duis aute irure dolor in reprehenderit dolore eu fugiat
-                    nulla pariatur.
+                    Operating with transparency, honesty, and ethics. We
+                    prioritize building trust with our clients and stakeholders
+                    through secure and reliable practices
                   </p>
                 </div>
               </div>
@@ -406,7 +433,7 @@
                 ></div>
               </div>
               <div class="mt-1">
-                <span class="bg-black px-2 py-1 text-sm">100 %</span>
+                <span class="bg-yellow-400 text-black px-2 py-1 text-sm">100 %</span>
               </div>
             </div>
 
@@ -419,7 +446,7 @@
                 ></div>
               </div>
               <div class="mt-1">
-                <span class="bg-black px-2 py-1 text-sm">100 %</span>
+  <span class="bg-yellow-400 text-black px-2 py-1 text-sm">100 %</span>
               </div>
             </div>
 
@@ -433,7 +460,7 @@
                 ></div>
               </div>
               <div class="mt-1">
-                <span class="bg-black px-2 py-1 text-sm">100 %</span>
+                <span class="bg-yellow-400 text-black px-2 py-1 text-sm">100 %</span>
               </div>
             </div>
 
@@ -447,7 +474,7 @@
                 ></div>
               </div>
               <div class="mt-1">
-                <span class="bg-black px-2 py-1 text-sm">100 %</span>
+  <span class="bg-yellow-400 text-black px-2 py-1 text-sm">100 %</span>
               </div>
             </div>
 
@@ -459,7 +486,7 @@
           <!-- Right Section -->
           <div class="w-1/2 bg-yellow-500 p-16 flex flex-col justify-center">
             <!-- Address -->
-            <div class="text-white mb-6">
+            <div class="text-black mb-6">
               <div class="flex items-center mb-2">
                 <i class="fas fa-location-dot mr-3"></i>
                 <p>184 Main Rep Street, 8007</p>
@@ -470,30 +497,30 @@
               </div>
             </div>
 
-            <h2 class="text-4xl font-light text-white mb-8">Contact us now</h2>
+            <h2 class="text-4xl font-light text-black mb-8">Contact Us </h2>
 
             <!-- Contact Form -->
             <form class="space-y-6">
               <div class="flex space-x-4">
                 <input
                   type="text"
-                  placeholder="name"
-                  class="flex-1 bg-transparent border-b border-white placeholder-white focus:outline-none"
+                  placeholder="Name"
+                  class="flex-1 bg-transparent border-b border-black placeholder-black focus:outline-none"
                 />
                 <input
                   type="email"
-                  placeholder="email"
-                  class="flex-1 bg-transparent border-b border-white placeholder-white focus:outline-none"
+                  placeholder="Email"
+                  class="flex-1 bg-transparent border-b border-black placeholder-black focus:outline-none"
                 />
               </div>
               <textarea
                 rows="3"
                 placeholder="Write your message"
-                class="w-full bg-transparent border-b border-white placeholder-white focus:outline-none"
+                class="w-full bg-transparent border-b border-black placeholder-black focus:outline-none"
               ></textarea>
 
               <button
-                class="flex items-center bg-white text-gray-800 px-4 py-2 rounded shadow mt-4"
+                class="flex items-center border-2 border-bg-black text-black px-4 py-2 rounded shadow mt-4"
               >
                 <i class="fas fa-envelope mr-2"></i> Send message
               </button>
