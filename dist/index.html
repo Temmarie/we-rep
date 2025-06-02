@@ -27,6 +27,12 @@
   <meta name="twitter:description" content="Expand your business in the UK with WeRep. We offer logistics, operations, and full-service representation for international companies.">
   <meta name="twitter:image" content="https://res.cloudinary.com/temmarie/image/upload/v1748248419/young-family-buying-car-dealer_f84fz0.webp">
 
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/output.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -81,8 +87,8 @@ class="fixed top-0 left-0 w-full z-50">
         <a href="about.html" class="hover:text-yellow-500">About</a>
         <a href="contact.html" class="hover:text-yellow-500">Contact</a>
       </nav>
-      <button @click="mobileOpen = !mobileOpen" class="md:hidden">
-        <i :class="mobileOpen ? 'fas fa-times' : 'fas fa-bars'" class="text-xl"></i>
+      <button @click="mobileOpen = !mobileOpen" class="md:hidden text-white">
+        <i :class="mobileOpen ? 'fas fa-times' : 'fas fa-bars'" class="text-xl text-white"></i>
       </button>
     </div>
     <div x-show="mobileOpen" x-transition class="md:hidden bg-white border-t border-gray-200">
@@ -102,7 +108,7 @@ class="fixed top-0 left-0 w-full z-50">
     <main>
       <div class="mt-10"></div>
       <!-- Hero Section -->
-      <section class="relative bg-black text-white p-32">
+      <section class="relative bg-black text-white py-32">
         <!-- Background Image with Overlay -->
         <img
           src="https://res.cloudinary.com/temmarie/image/upload/v1748293473/african-business-male-people-shaking-hands_axnpnp.webp"
@@ -112,7 +118,7 @@ class="fixed top-0 left-0 w-full z-50">
 
         <!-- Content -->
         <div
-          class="relative z-10 flex flex-wrap justify-center lg:justify-start lg:flex-nowrap h-full px-4"
+          class="relative z-10 flex flex-wrap justify-center lg:justify-start lg:flex-nowrap h-full max-w-7xl mx-auto px-4"
         >
           <!-- Left Content -->
           <div class="max-w-3xl lg:w-1/2 xl:w-2/5 flex flex-col justify-start">
@@ -249,43 +255,47 @@ class="fixed top-0 left-0 w-full z-50">
       { name: 'Mike Davis', text: 'WeRep has helped us identify new opportunities and navigate the UK market with confidence.' },
       { name: 'Emily Taylor', text: 'The team at WeRep is responsive and proactive. They have helped us overcome numerous challenges.' }
     ],
+    slidesPerView: 2,
+    updateSlidesPerView() {
+      this.slidesPerView = window.innerWidth < 768 ? 1 : 2;
+    },
     next() {
-      this.activeSlide = (this.activeSlide + 2) % this.slides.length;
+      this.activeSlide = (this.activeSlide + this.slidesPerView) % this.slides.length;
     },
     prev() {
-      this.activeSlide = (this.activeSlide - 2 + this.slides.length) % this.slides.length;
+      this.activeSlide = (this.activeSlide - this.slidesPerView + this.slides.length) % this.slides.length;
     },
     get visibleSlides() {
-      // Handles wrapping around if at end of array
-      return this.slides.slice(this.activeSlide, this.activeSlide + 2).concat(
-        this.activeSlide + 2 > this.slides.length ? this.slides.slice(0, (this.activeSlide + 2) % this.slides.length) : []
+      const end = this.activeSlide + this.slidesPerView;
+      return this.slides.slice(this.activeSlide, end).concat(
+        end > this.slides.length ? this.slides.slice(0, end % this.slides.length) : []
       );
     }
   }"
-  x-init="setInterval(() => next(), 5000)"
+  x-init="
+    updateSlidesPerView();
+    window.addEventListener('resize', updateSlidesPerView);
+    setInterval(() => next(), 5000);
+  "
   class="relative col-span-1 lg:col-span-2"
 >
-  <div class="flex space-x-4 overflow-hidden">
-    <template x-for="(slide, index) in visibleSlides" :key="index">
+
+<div class="flex overflow-hidden space-x-4">
+  <template x-for="(slide, index) in visibleSlides" :key="index">
+    <div
+      x-transition
+      class="min-w-full sm:min-w-[300px] transition-all duration-700 ease-in-out"
+    >
       <div
-        x-transition
-        class="min-w-[300px] transition-all duration-700 ease-in-out"
+        class="border-4 border-yellow-400 p-6 w-full sm:w-[300px] h-[200px] text-center overflow-y-auto"
       >
-        <div
-          class="border-4 border-yellow-400 p-6 w-[300px] h-[200px] text-center overflow-y-auto"
-        >
-          <h3
-            class="text-yellow-500 text-lg font-semibold"
-            x-text="slide.name"
-          ></h3>
-          <p
-            class="text-gray-600 text-md mt-1"
-            x-text="slide.text"
-          ></p>
-        </div>
+        <h3 class="text-yellow-500 text-lg font-semibold" x-text="slide.name"></h3>
+        <p class="text-gray-600 text-md mt-1" x-text="slide.text"></p>
       </div>
-    </template>
-  </div>
+    </div>
+  </template>
+</div>
+
 
   <!-- Dots -->
   <div class="absolute bottom-8 right-4 flex space-x-2">
@@ -445,9 +455,9 @@ class="fixed top-0 left-0 w-full z-50">
           background-image: url('https://res.cloudinary.com/temmarie/image/upload/v1748248419/young-african-businessman-businessman-shaking-hand-front-glass-window_bwrmlf.webp');
         "
       >
-        <div class="flex min-h-screen bg-black/40 text-white">
+        <div class="grid grid-cols-1 lg:grid-cols-2  min-h-screen bg-black/40 text-white">
           <!-- Left Section -->
-          <div class="w-1/2 p-16 flex flex-col justify-center">
+          <div class=" p-16 flex flex-col justify-center">
             <p class="text-lg">Top Values</p>
             <h1 class="text-5xl font-light mb-8">Core Values</h1>
             <div class="w-3/4 h-1 bg-white mb-10"></div>
@@ -513,7 +523,7 @@ class="fixed top-0 left-0 w-full z-50">
           </div>
 
           <!-- Right Section -->
-          <div class="w-1/2 bg-yellow-500 p-16 flex flex-col justify-center">
+          <div class=" bg-yellow-500 p-16 flex flex-col justify-center">
             <!-- Address -->
             <div class="text-black mb-6">
               <div class="flex items-center mb-2">

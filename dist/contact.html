@@ -126,7 +126,7 @@
           <button @click="mobileOpen = !mobileOpen" class="md:hidden">
             <i
               :class="mobileOpen ? 'fas fa-times' : 'fas fa-bars'"
-              class="text-xl"
+              class="text-xl text-white"
             ></i>
           </button>
         </div>
@@ -151,9 +151,9 @@
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
           <img
-            src="https://res.cloudinary.com/temmarie/image/upload/v1747670803/young-students-learning-together-group-study_h6im0q.webp"
+            src="https://res.cloudinary.com/temmarie/image/upload/v1748293473/people-discussing-business-plan_l1bc5m.webp"
             alt="Students Group Study"
-            class="w-full h-full object-cover"
+            class="w-full h-full"
           />
           <!-- Gradient Overlay -->
           <div class="absolute inset-0 bg-black/60"></div>
@@ -179,9 +179,9 @@
       </section>
 
       <section class="bg-gray-50 min-w-full">
-        <div class="flex min-h-screen text-black">
+        <div class="grid grid-cols-1 lg:grid-cols-2 min-h-screen text-black">
           <!-- Left Section -->
-          <div class="w-1/2 p-16 flex flex-col justify-center">
+          <div class="p-16 flex flex-col justify-center">
             <p class="text-lg">Contact Us</p>
             <h1 class="text-4xl font-semibold mb-8 uppercase">Get In Touch</h1>
             <div class="w-3/4 h-1 bg-yellow-400 mb-10"></div>
@@ -223,7 +223,7 @@
           </div>
 
           <!-- Right Section -->
-          <div class="w-1/2 bg-yellow-400 p-16 flex flex-col justify-center">
+          <div class="bg-yellow-400 p-16 flex flex-col justify-center">
             <!-- Address -->
             <div class="text-black mb-6">
               <div class="flex items-center mb-2">
