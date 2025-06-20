@@ -144,3 +144,40 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  let currentPath = window.location.pathname.toLowerCase();
+
+  // Normalize for the homepage: if the URL is "/" or empty, set to "index.html"
+  if (currentPath === "/" || currentPath === "") {
+    currentPath = "index.html";
+  } else {
+    currentPath = currentPath.split("/").pop(); // e.g., "about.html"
+  }
+
+  const links = document.querySelectorAll("a.nav-link");
+  links.forEach((link) => {
+    const href = link.getAttribute("href").toLowerCase();
+    if (currentPath.includes(href)) {
+      link.classList.add(
+        "text-yellow-500",
+        "border-b-2",
+        "border-yellow-500",
+        "pb-1"
+      );
+      link.classList.remove("hover:text-yellow-500");
+    } else {
+      link.classList.add(
+        "hover:text-yellow-500",
+        "transition-colors",
+        "duration-200"
+      );
+      link.classList.remove(
+        "text-yellow-500",
+        "border-b-2",
+        "border-yellow-500",
+        "pb-1"
+      );
+    }
+  });
+});

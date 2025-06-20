@@ -59,3 +59,23 @@ body {
 .slide-up-3 {
   animation: slideUp 1.2s ease-in-out;
 }
+
+a.nav-link {
+  position: relative;
+  color: white;
+}
+
+a.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #fcc600;
+  transition: width 0.3s ease;
+}
+
+a.nav-link:hover::after {
+  width: 100%;
+}

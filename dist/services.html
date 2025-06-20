@@ -70,8 +70,8 @@
 
   <body class="bg-white text-gray-900 font-sans">
     <!-- Header -->
-    <header
-      x-data="{ 
+    <!-- Header -->
+<header x-data="{ 
   mobileOpen: false, 
   lastScrollY: window.scrollY, 
   hidden: false, 
@@ -83,73 +83,55 @@
     } 
     this.lastScrollY = window.scrollY; 
   } 
-}"
-      x-init="window.addEventListener('scroll', () => handleScroll())"
-      class="fixed top-0 left-0 w-full z-50"
-    >
-      <div
-        :class="hidden ? '-top-24' : 'top-0'"
-        class="absolute w-full bg-black shadow-md transition-all duration-300 ease-in-out"
-      >
-        <div class="bg-yellow-400 p-1"></div>
-        <div
-          class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
-        >
-          <a href="index.html" class="flex items-center">
-            <div class="p-2">
-              <!-- Spade SVG icon -->
-              <img
-                src="https://res.cloudinary.com/temmarie/image/upload/v1748354769/freepik__upload__52132_1_zecuwn.svg"
-                alt="logo"
-                class="h-16 w-auto object-contain"
-              />
-            </div>
-            <div class="flex flex-col justify-center">
-              <span class="text-4xl font-bold text-yellow-400 tracking-wider">
-                WeRep
-              </span>
-              <small class="text-yellow-400 text-sm -mt-1">
-                Innovative UK Business Facilitators
-              </small>
-            </div>
-          </a>
+}" 
+x-init="window.addEventListener('scroll', () => handleScroll())" 
+class="fixed top-0 left-0 w-full z-50">
+  <div :class="hidden ? '-top-24' : 'top-0'" 
+       class="absolute w-full bg-black shadow-md transition-all duration-300 ease-in-out">
+    <div class="bg-yellow-400 p-1"></div>
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      
+      
+  <a href="index.html" class="flex items-center">
+  <div class="p-2">
+    <!-- Spade SVG icon -->
+    <img src="https://res.cloudinary.com/temmarie/image/upload/v1748354769/freepik__upload__52132_1_zecuwn.svg" 
+         alt="logo" 
+         class="h-16 w-auto object-contain">
+  </div>
+  <div class="flex flex-col justify-center">
+    <span class="text-4xl font-bold text-yellow-400 tracking-wider">
+      WeRep
+    </span>
+    <small class="text-yellow-400 text-sm -mt-1">
+      Innovative UK Business Facilitators
+    </small>
+  </div>
+</a>
 
-          <nav
-            class="hidden md:flex space-x-6 text-sm uppercase font-semibold tracking-wide text-white"
-          >
-            <a href="index.html" class="text-yellow-500">Home</a>
-            <a href="about.html" class="hover:text-yellow-500">About</a>
-            <a href="services.html" class="hover:text-yellow-500"> Services</a>
+<nav class="hidden md:flex space-x-6 text-sm uppercase font-semibold tracking-wide text-white">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="about.html" class="nav-link">About</a>
+  <a href="services.html" class="nav-link">Services</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+</nav>
 
-            <a href="contact.html" class="hover:text-yellow-500">Contact</a>
-          </nav>
-          <button
-            @click="mobileOpen = !mobileOpen"
-            class="md:hidden text-white"
-          >
-            <i
-              :class="mobileOpen ? 'fas fa-times' : 'fas fa-bars'"
-              class="text-xl text-white"
-            ></i>
-          </button>
-        </div>
-        <div
-          x-show="mobileOpen"
-          x-transition
-          class="md:hidden bg-white border-t border-gray-200"
-        >
-          <nav
-            class="flex flex-col px-4 py-4 space-y-2 text-sm uppercase font-semibold"
-          >
-            <a href="index.html" class="text-yellow-500">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html" class="hover:text-yellow-500">Services</a>
+      <button @click="mobileOpen = !mobileOpen" class="md:hidden text-white">
+        <i :class="mobileOpen ? 'fas fa-times' : 'fas fa-bars'" class="text-xl text-white"></i>
+      </button>
+    </div>
+    <div x-show="mobileOpen" x-transition class="md:hidden bg-black text-white border-t border-gray-200">
+<nav class="flex flex-col px-4 py-4 space-y-2 text-sm uppercase font-semibold">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="about.html" class="nav-link">About</a>
+  <a href="services.html" class="nav-link">Services</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+</nav>
 
-            <a href="contact.html">Contact</a>
-          </nav>
-        </div>
-      </div>
-    </header>
+    </div>
+  </div>
+</header>
+
 
 
     <main>
