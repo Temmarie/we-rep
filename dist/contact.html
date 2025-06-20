@@ -121,9 +121,14 @@
           >
             <a href="index.html" class="text-yellow-500">Home</a>
             <a href="about.html" class="hover:text-yellow-500">About</a>
+            <a href="services.html" class="hover:text-yellow-500"> Services</a>
+
             <a href="contact.html" class="hover:text-yellow-500">Contact</a>
           </nav>
-          <button @click="mobileOpen = !mobileOpen" class="md:hidden">
+          <button
+            @click="mobileOpen = !mobileOpen"
+            class="md:hidden text-white"
+          >
             <i
               :class="mobileOpen ? 'fas fa-times' : 'fas fa-bars'"
               class="text-xl text-white"
@@ -140,6 +145,8 @@
           >
             <a href="index.html" class="text-yellow-500">Home</a>
             <a href="about.html">About</a>
+            <a href="services.html" class="hover:text-yellow-500">Services</a>
+
             <a href="contact.html">Contact</a>
           </nav>
         </div>
@@ -147,43 +154,15 @@
     </header>
 
     <main>
-      <section class="relative py-32 text-white overflow-hidden">
-        <!-- Background Image -->
-        <div class="absolute inset-0 z-0">
-          <img
-            src="https://res.cloudinary.com/temmarie/image/upload/v1748293473/people-discussing-business-plan_l1bc5m.webp"
-            alt="Students Group Study"
-            class="w-full h-full"
-          />
-          <!-- Gradient Overlay -->
-          <div class="absolute inset-0 bg-black/60"></div>
-        </div>
 
-        <!-- Foreground Content -->
-        <div class="relative z-10 container mx-auto px-4 text-center">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">
-            Unlock Your Future in the UK
-          </h1>
-          <p class="text-lg md:text-xl max-w-2xl mx-auto">
-            Trusted UK-based business facilitation and representation — for when
-            you need local results without being local.
-          </p>
-          <br />
-          <a
-            href="courses.html"
-            class="bg-white hover:bg-black hover:text-white text-black px-6 py-3 rounded-md transition-colors"
-          >
-            Get Started
-          </a>
-        </div>
-      </section>
+      <div class="mt-8 p-10"></div>
 
+      
       <section class="bg-gray-50 min-w-full">
         <div class="grid grid-cols-1 lg:grid-cols-2 min-h-screen text-black">
           <!-- Left Section -->
           <div class="p-16 flex flex-col justify-center">
-            <p class="text-lg">Contact Us</p>
-            <h1 class="text-4xl font-semibold mb-8 uppercase">Get In Touch</h1>
+            <h1 class="text-4xl font-semibold mb-8 uppercase">Let Us Help you win in the Uk!</h1>
             <div class="w-3/4 h-1 bg-yellow-400 mb-10"></div>
             <!-- Contact Info -->
             <div class="space-y-6">
@@ -198,14 +177,16 @@
                 <h3 class="text-xl font-semibold mb-2">Phone</h3>
                 <p class="text-gray-700 flex items-center">
                   <i class="fas fa-phone text-yellow-500 mr-2"></i>
-                  +44 123 456 789
+                  +44 147 461 2085
                 </p>
               </div>
               <div>
                 <h3 class="text-xl font-semibold mb-2">Address</h3>
-                <p class="text-gray-700 flex items-center">
+                <br class="text-gray-700 flex items-center">
                   <i class="fas fa-map-marker-alt text-yellow-500 mr-2"></i>
-                  123 London Street, London, UK
+                  Mildenhall Industrial Estate <br />
+                  82 James Carter Rd, Mildenhall, <br />
+                  Bury Saint Edmunds IP28 7DE, UK
                 </p>
               </div>
               <div class="space-x-4 text-xl mt-6">
@@ -225,50 +206,80 @@
           <!-- Right Section -->
           <div class="bg-yellow-400 p-16 flex flex-col justify-center">
             <!-- Address -->
-            <div class="text-black mb-6">
-              <div class="flex items-center mb-2">
-                <i class="fas fa-location-dot mr-3"></i>
-                <p>123 London Street, London, UK</p>
-              </div>
-              <div class="flex items-center">
-                <i class="fas fa-calendar-days mr-3"></i>
-                <p>Mon - Sat 8.00 - 18.00</p>
-              </div>
-            </div>
-
-            <h2 class="text-4xl font-light text-black mb-8">Contact Us</h2>
-
+           
+            <h2 class="text-4xl font-bold text-black mb-8">Contact Us</h2>
+<div class="w-4 h-1 bg-black mb-10"></div>
             <!-- Contact Form -->
-            <form class="space-y-6">
-              <div class="flex space-x-4">
-                <input
-                  type="text"
-                  placeholder="Name"
-                  class="flex-1 bg-transparent border-b border-black placeholder-black focus:outline-none"
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  class="flex-1 bg-transparent border-b border-black placeholder-black focus:outline-none"
-                />
-              </div>
-              <textarea
-                rows="3"
-                placeholder="Write your message"
-                class="w-full bg-transparent border-b border-black placeholder-black focus:outline-none"
-              ></textarea>
+<form class="space-y-6" id="contactForm">
+  <!-- Full Name -->
+  <div class="flex flex-col space-y-2">
+    <span class="text-sm text-black font-bold">Full Name</span>
+    <input 
+      type="text" 
+      id="fullName" 
+      name="fullName" 
+      placeholder="Your Full Name Here..." 
+      class="w-full px-4 py-3 border border-black rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition" 
+      required 
+      pattern="[a-zA-Z\s]+" 
+      title="Please enter a valid full name"
+    />
+    <div class="text-red-500 text-xs hidden" id="fullNameError">Please enter a valid full name</div>
+  </div>
 
-              <button
-                class="flex items-center border-2 border-bg-black text-black px-4 py-2 rounded shadow mt-4"
-              >
-                <i class="fas fa-envelope mr-2"></i> Send message
-              </button>
-            </form>
+  <!-- Email -->
+  <div class="flex flex-col space-y-2">
+    <span class="text-sm text-black font-bold">Email Address</span>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      placeholder="Your Email Address Here..." 
+      class="w-full px-4 py-3 border border-black rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition" 
+      required 
+    />
+    <div class="text-red-500 text-xs hidden" id="emailError">Please enter a valid email address</div>
+  </div>
+
+  <!-- Company -->
+  <div class="flex flex-col space-y-2">
+    <span class="text-sm text-black font-bold">Company</span>
+    <input 
+      type="text" 
+      id="company" 
+      name="company" 
+      placeholder="Your Company..." 
+      class="w-full px-4 py-3 border border-black rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition" 
+    />
+  </div>
+
+  <!-- Message -->
+  <div class="flex flex-col space-y-2">
+    <span class="text-sm text-black font-bold">Tell Us How We Can Help you!</span>
+    <textarea 
+      rows="5" 
+      id="message" 
+      name="message" 
+      placeholder="Tell us more about what you need..." 
+      class="w-full px-4 py-3 border border-black rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition resize-none" 
+      required
+    ></textarea>
+    <div class="text-red-500 text-xs hidden" id="messageError">Please enter a message</div>
+  </div>
+
+  <button 
+    type="submit" 
+    class="flex items-center border-2 border-black text-black px-4 py-2 rounded shadow mt-4"
+  >
+    <i class="fas fa-envelope mr-2"></i> Send Message
+  </button>
+</form>
+
           </div>
         </div>
       </section>
 
-      <!-- Optional Map -->
+
       <!-- Google Map -->
       <section class="h-96">
         <h2 class="text-center text-white text-2xl py-4 bg-black">
@@ -286,41 +297,41 @@
         ></iframe>
       </section>
     </main>
-    <!-- Footer -->
-    <!-- Footer -->
-    <!-- Footer -->
+
+        <!-- Footer -->
     <footer class="bg-black text-white py-16 border-t border-white/10">
       <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <!-- Brand Description -->
           <div class="space-y-4">
             <div class="flex items-center space-x-4">
-              <a href="index.html" class="flex items-center">
-                <div class="p-2">
-                  <!-- Spade SVG icon -->
-                  <img
-                    src="https://res.cloudinary.com/temmarie/image/upload/v1748354769/freepik__upload__52132_1_zecuwn.svg"
-                    alt="logo"
-                    class="h-16 w-auto object-contain"
-                  />
-                </div>
-                <div class="flex flex-col justify-center">
-                  <span
-                    class="text-3xl font-bold text-yellow-400 tracking-wider uppercase"
-                  >
-                    WeRep
-                  </span>
-                  <small class="text-yellow-400 text-sm -mt-1">
-                    Innovative UK Business Facilitators
-                  </small>
-                </div>
-              </a>
+               <a href="index.html" class="flex items-center">
+  <div class="p-2">
+    <!-- Spade SVG icon -->
+    <img src="https://res.cloudinary.com/temmarie/image/upload/v1748354769/freepik__upload__52132_1_zecuwn.svg" 
+         alt="logo" 
+         class="h-16 w-auto object-contain">
+  </div>
+  <div class="flex flex-col justify-center">
+    <span class="text-3xl font-bold text-yellow-400 tracking-wider uppercase">
+      WeRep
+    </span>
+    <small class="text-yellow-400 text-sm -mt-1">
+      Innovative UK Business Facilitators
+    </small>
+  </div>
+</a>
             </div>
             <p class="text-white/70 text-sm">
-              WeRep is your trusted partner for business facilitation and
-              representation in the UK. We help businesses navigate the
-              complexities of operating in the UK, providing expert logistics,
-              investment facilitation, and more.
+             WeRep is your trusted partner for business facilitation and representation in the UK.
+              We help businesses and individuals navigate the complexities of setting up and operating in
+               the UK, whilst they focus on their core undertaking in their home countries.
+             
+             </br>
+               <span class="text-yellow-400 font-semibold">
+We don't just add you value - we save you time and money.
+               </span>
+               
             </p>
             <div class="flex space-x-4 text-white/60">
               <a href="#" class="hover:text-yellow-400">
@@ -337,6 +348,49 @@
               </a>
             </div>
           </div>
+
+            <!-- Services -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Our Services</h4>
+            <ul class="space-y-2 text-white/70 text-sm">
+              <li>
+                <a href="services.html#services" class="hover:text-yellow-400">Cargo Clearance & Delivery</a>
+              </li>
+              <li>
+                <a href="services.html#services" class="hover:text-yellow-400"
+                  >Personal Shopper</a
+                >
+              </li>
+              <li>
+                <a href="services.html#services" class="hover:text-yellow-400"
+                  >Investment Facilitation</a
+                >
+              </li>
+              <li>
+                <a href="services.html#services" class="hover:text-yellow-400"
+                  >UK Event Representation</a
+                >
+              </li>
+               <li>
+                <a href="services.html#services" class="hover:text-yellow-400">Training & Development</a>
+              </li>
+               <li>
+                <a href="services.html#services" class="hover:text-yellow-400">Product Inspection</a>
+              </li>
+               <li>
+                <a href="services.html#services" class="hover:text-yellow-400">Warehousing & Storage Solutions</a>
+              </li>
+               <li>
+                <a href="services.html#services" class="hover:text-yellow-400">Operations & Logistics</a>
+              </li>
+               <li>
+                <a href="services.html#services" class="hover:text-yellow-400">Meetings & Conferences</a>
+              </li>
+               <li>
+                <a href="about.html#services" class="hover:text-yellow-400">Airport Pickups & Accommodations Facilitation</a>
+              </li>
+            </ul>
+          </div>
           <!-- Navigation -->
           <div>
             <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
@@ -348,52 +402,33 @@
               <li>
                 <a href="about.html" class="hover:text-yellow-400">About</a>
               </li>
+
+                 <li>
+                <a href="services.html" class="hover:text-yellow-400">Services</a>
+              </li>
               <li>
                 <a href="contact.html" class="hover:text-yellow-400">Contact</a>
               </li>
             </ul>
           </div>
-          <!-- Services -->
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Our Services</h4>
-            <ul class="space-y-2 text-white/70 text-sm">
-              <li>
-                <a href="about.html#services" class="hover:text-yellow-400"
-                  >Business Facilitation</a
-                >
-              </li>
-              <li>
-                <a href="about.html#services" class="hover:text-yellow-400"
-                  >Logistics and Shipping</a
-                >
-              </li>
-              <li>
-                <a href="about.html#services" class="hover:text-yellow-400"
-                  >Investment Facilitation</a
-                >
-              </li>
-              <li>
-                <a href="about.html#services" class="hover:text-yellow-400"
-                  >UK Business Representation</a
-                >
-              </li>
-            </ul>
-          </div>
+        
           <!-- Contact Info -->
           <div>
             <h4 class="text-lg font-semibold mb-4">Contact</h4>
             <ul class="space-y-4 text-white/70 text-sm">
               <li class="flex items-start gap-2">
                 <i class="fas fa-map-marker-alt mt-1 text-yellow-400"></i>
-                UK Office Address
+                 Mildenhall Industrial Estate <br />
+                  82 James Carter Rd, Mildenhall, <br />
+                  Bury Saint Edmunds IP28 7DE, UK
               </li>
               <li class="flex items-center gap-2">
                 <i class="fas fa-phone-alt text-yellow-400"></i>
-                +44 1234 567890
+                +44 147 461 2085
               </li>
               <li class="flex items-center gap-2">
                 <i class="fas fa-envelope text-yellow-400"></i>
-                hello@werep.co.uk
+                contact@werep.co.uk
               </li>
             </ul>
           </div>
