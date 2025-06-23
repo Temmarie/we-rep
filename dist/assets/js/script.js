@@ -19,16 +19,16 @@ function carousel() {
         subtitle:
           "We act as your local team—handling logistics, vendors, deliveries, and in-country oversight.",
         description:
-          "At WeRep, we from coordinating supply chains to managing deliveries and local vendors, we ensure smooth day-to-day operations across the UK.",
+          "From coordinating supply chains to managing deliveries and local vendors, we ensure smooth day-to-day operations across the UK.",
       },
       {
         image:
           "https://res.cloudinary.com/temmarie/image/upload/v1750423996/training_ms5omb.webp",
-        title: "Training & Development",
+        title: "Training and Course facilitation",
         subtitle:
           "We handle every training detail—from airport pickup to course coordination—for your team’s development.",
         description:
-          "At WeRep, we organize custom training programs and logistics for your staff, including accommodation, transportation, and local coordination.",
+          "We organize customised training programs and logistics for your staff, including accommodation, transportation, and local coordination.",
       },
       {
         image:
@@ -37,7 +37,7 @@ function carousel() {
         subtitle:
           "We attend events, seminars, and meetings on your behalf—ensuring your business is visible.",
         description:
-          "At WeRep, we no need to travel—our team represents your brand at strategic events, collects insights, and ensures your presence is felt where it matters.",
+          "No need to travel—our team represents your brand at strategic events, collects insights, and ensures your presence is felt where it matters.",
       },
       {
         image:
@@ -46,7 +46,7 @@ function carousel() {
         subtitle:
           "We attend, report, and advocate on your behalf at key UK meetings or conferences.",
         description:
-          "At WeRep, we join meetings with potential partners, clients, or institutions on your behalf, providing detailed reports and live feedback as needed.",
+          "We can join meetings with potential partners, clients, or institutions on your behalf, providing detailed reports and live feedback as needed.",
       },
       {
         image:
@@ -55,7 +55,7 @@ function carousel() {
         subtitle:
           "We perform detailed visual inspections (live or recorded) to ensure your satisfaction before approval or shipping.",
         description:
-          "At WeRep, we verify product quality, packaging, and specifications—offering peace of mind before payments, approvals, or shipment dispatch.",
+          "We can verify product quality, packaging, and inspection and can ship to door steps worldwide.",
       },
       {
         image:
@@ -64,7 +64,7 @@ function carousel() {
         subtitle:
           "We provide secure, scalable storage across the UK tailored to your distribution and budget needs.",
         description:
-          "At WeRep, we offer flexible storage solutions cater to various inventory sizes, ensuring safe and convenient access to your goods anytime.",
+          "At WeRep we facilitate customised and flexible storage solutions to cater to various inventory sizes, ensuring safe and convenient access to your goods anytime.",
       },
       {
         image:
@@ -73,7 +73,7 @@ function carousel() {
         subtitle:
           "Full-service customs clearance, delivery or forwarding—compliant, timely, and stress-free.",
         description:
-          "At WeRep we, manage the complexities of customs, taxes, and UK border regulations, ensuring prompt delivery or forwarding of your goods.",
+          "At WeRep we will help you navigate the complexity of custom clearance ensuring on-time delivery of your consignments.",
       },
       {
         image:
@@ -82,22 +82,22 @@ function carousel() {
         subtitle:
           "Whether luxury or essentials, we purchase as instructed and deliver internationally, discreetly and securely.",
         description:
-          "At WeRep we, act on your behalf to buy specified items in the UK and deliver them with confidentiality, efficiency, and accuracy.",
+          "We act on your behalf to buy specified items in the UK as instructed and deliver internationally to your door step.",
       },
       {
         image:
           "https://res.cloudinary.com/temmarie/image/upload/v1750423996/airport_bu37bm.webp",
-        title: "Airport Pickups & Accommodation",
+        title: " Airport Meet & Greet and Accommodation Facilitation",
         subtitle: "Travel and lodging support for you or your team in the UK",
         description:
-          "At WeRep we, offer smooth airport pickups and book suitable accommodations for business or personal visits—ensuring safety, comfort, and convenience.",
+          "We will facilitate you smooth Airport pickup and book suitable accommodations for business or personal visits—ensuring safety, comfort, and convenience.",
       },
     ],
 
     start() {
       this.timer = setInterval(() => {
         this.next();
-      }, 15000);
+      }, 20000);
     },
     next() {
       this.active = (this.active + 1) % this.slides.length;

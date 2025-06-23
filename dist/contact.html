@@ -72,7 +72,6 @@
     <!-- Top Bar -->
 
     <!-- Header -->
-    <!-- Header -->
 <header x-data="{ 
   mobileOpen: false, 
   lastScrollY: window.scrollY, 
@@ -111,10 +110,12 @@ class="fixed top-0 left-0 w-full z-50">
   </div>
 </a>
 
+<!-- desktop -->
 <nav class="hidden md:flex space-x-6 text-sm uppercase font-semibold tracking-wide text-white">
-  <a href="index.html" class="nav-link">Home</a>
+  <a href="index.html" class="nav-link active text-yellow-400">Home</a>
   <a href="about.html" class="nav-link">About</a>
   <a href="services.html" class="nav-link">Services</a>
+     <a href="about.html#core-values" class="nav-link whitespace-nowrap">Core Values</a>
   <a href="contact.html" class="nav-link">Contact</a>
 </nav>
 
@@ -123,9 +124,11 @@ class="fixed top-0 left-0 w-full z-50">
       </button>
     </div>
     <div x-show="mobileOpen" x-transition class="md:hidden bg-black text-white border-t border-gray-200">
-<nav class="flex flex-col px-4 py-4 space-y-2 text-sm uppercase font-semibold">
+      <!-- mobile -->
+      <nav class="flex flex-col px-4 py-4 space-y-2 text-sm uppercase font-semibold">
   <a href="index.html" class="nav-link">Home</a>
   <a href="about.html" class="nav-link">About</a>
+    <a href="about.html#core-values" class="nav-link">Core Values</a>
   <a href="services.html" class="nav-link">Services</a>
   <a href="contact.html" class="nav-link">Contact</a>
 </nav>
@@ -133,6 +136,7 @@ class="fixed top-0 left-0 w-full z-50">
     </div>
   </div>
 </header>
+
 
     <main>
 
@@ -144,7 +148,7 @@ class="fixed top-0 left-0 w-full z-50">
           <!-- Left Section -->
           <div class="p-16 flex flex-col justify-center">
             <h1 class="text-4xl font-semibold mb-8 uppercase">Let Us Help you win in the Uk!</h1>
-            <div class="w-3/4 h-1 bg-yellow-400 mb-10"></div>
+            <div class="w-full h-1 bg-yellow-400 mb-10"></div>
             <!-- Contact Info -->
             <div class="space-y-6">
               <div>
@@ -189,7 +193,7 @@ class="fixed top-0 left-0 w-full z-50">
             <!-- Address -->
            
             <h2 class="text-4xl font-bold text-black mb-8">Contact Us</h2>
-<div class="w-4 h-1 bg-black mb-10"></div>
+<div class="w-3/4 h-1 bg-black mb-10"></div>
             <!-- Contact Form -->
 <form class="space-y-6" id="contactForm">
   <!-- Full Name -->
@@ -280,6 +284,7 @@ class="fixed top-0 left-0 w-full z-50">
     </main>
 
         <!-- Footer -->
+        <!-- Footer -->
     <footer class="bg-black text-white py-16 border-t border-white/10">
       <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -310,7 +315,8 @@ class="fixed top-0 left-0 w-full z-50">
              
              </br>
                <span class="text-yellow-400 font-semibold">
-We don't just add you value - we save you time and money.
+Come leverage on our versatility and local know-how whilst cutting your operational carbon footprint.
+
                </span>
                
             </p>
@@ -368,7 +374,7 @@ We don't just add you value - we save you time and money.
                 <a href="services.html#services" class="hover:text-yellow-400">Meetings & Conferences</a>
               </li>
                <li>
-                <a href="about.html#services" class="hover:text-yellow-400">Airport Pickups & Accommodations Facilitation</a>
+                <a href="services.html" class="hover:text-yellow-400">Airport Meet & Greet and Accommodation Facilitation</a>
               </li>
             </ul>
           </div>

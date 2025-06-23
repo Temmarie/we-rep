@@ -70,7 +70,6 @@
 
   <body class="bg-white text-gray-900 font-sans">
     <!-- Header -->
-    <!-- Header -->
 <header x-data="{ 
   mobileOpen: false, 
   lastScrollY: window.scrollY, 
@@ -109,10 +108,12 @@ class="fixed top-0 left-0 w-full z-50">
   </div>
 </a>
 
+<!-- desktop -->
 <nav class="hidden md:flex space-x-6 text-sm uppercase font-semibold tracking-wide text-white">
-  <a href="index.html" class="nav-link">Home</a>
+  <a href="index.html" class="nav-link active text-yellow-400">Home</a>
   <a href="about.html" class="nav-link">About</a>
   <a href="services.html" class="nav-link">Services</a>
+     <a href="about.html#core-values" class="nav-link whitespace-nowrap">Core Values</a>
   <a href="contact.html" class="nav-link">Contact</a>
 </nav>
 
@@ -121,9 +122,11 @@ class="fixed top-0 left-0 w-full z-50">
       </button>
     </div>
     <div x-show="mobileOpen" x-transition class="md:hidden bg-black text-white border-t border-gray-200">
-<nav class="flex flex-col px-4 py-4 space-y-2 text-sm uppercase font-semibold">
+      <!-- mobile -->
+      <nav class="flex flex-col px-4 py-4 space-y-2 text-sm uppercase font-semibold">
   <a href="index.html" class="nav-link">Home</a>
   <a href="about.html" class="nav-link">About</a>
+    <a href="about.html#core-values" class="nav-link">Core Values</a>
   <a href="services.html" class="nav-link">Services</a>
   <a href="contact.html" class="nav-link">Contact</a>
 </nav>
@@ -131,6 +134,8 @@ class="fixed top-0 left-0 w-full z-50">
     </div>
   </div>
 </header>
+
+
 
 
     <main>
@@ -237,15 +242,15 @@ class="fixed top-0 left-0 w-full z-50">
       </section>
 
       <!-- Mission + Core Values Section -->
-<section class="bg-black text-white py-28">
+<section class="bg-black text-white py-28" id="core-values">
   <!-- Divider -->
 
   <!-- Mission Statement -->
   <div class="text-center max-w-4xl mx-auto px-4 mb-16">
     <h2 class="text-4xl font-bold text-yellow-400 mb-4">Our Mission</h2>
     <p class="text-gray-300 text-lg leading-relaxed">
-      At WeRep, we empower businesses and individuals to seamlessly operate within the UK without crossing borders—
-      minimizing environmental impact while maximizing global opportunity.
+       At WeRep, our mission is to enable businesses and individuals to leverage our multidisciplinary versatility and local knowledge to optimise their operations in the UK without having to physically visit the UK. Thereby saving on travelling expenses, reducing their carbon footprint and more importantly hitting the ground running in the UK.
+
     </p>
   </div>
 
@@ -256,14 +261,27 @@ class="fixed top-0 left-0 w-full z-50">
     </h3>
 
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 text-white"
+      class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8 text-white"
     >
       <!-- Value Card -->
-     
+
+      <!-- sustain -->
+           <div class="flex items-start space-x-6">
+        <i class="fa fa-leaf text-yellow-400 text-5xl mt-1"></i>
+        <div class="w-1 h-32 bg-gray-500 rounded-full"></div>
+        <div>
+          <h4 class="text-xl font-semibold mb-2 text-yellow-300">Sustainability</h4>
+          <p class="text-sm text-gray-300 leading-relaxed">
+    This is one of
+             the main principle of our existence - 
+             representing companies and individuals in the UK means they don't have to fly or travel to the UK thereby saving the earth that infamous carbon footprint. Across our operation, we endeavour to mitigate adverse impacts on planet.
+          </p>
+        </div>
+      </div>
 
       <div class="flex items-start space-x-6">
         <i class="fa fa-shield-alt text-yellow-400 text-5xl mt-1"></i>
-        <div class="w-1 h-32 bg-gray-500 rounded-full"></div>
+       <div class="w-1 h-32 bg-gray-500 rounded-full"></div>
         <div>
           <h4 class="text-xl font-semibold mb-2 text-yellow-300">Integrity</h4>
           <p class="text-sm text-gray-300 leading-relaxed">
@@ -301,6 +319,17 @@ class="fixed top-0 left-0 w-full z-50">
           <h4 class="text-xl font-semibold mb-2 text-yellow-300">Excellence</h4>
           <p class="text-sm text-gray-300 leading-relaxed">
             We strive for world-class standards, consistently aiming to exceed expectations and improve continuously.
+          </p>
+        </div>
+      </div>
+
+         <div class="flex items-start space-x-6">
+        <i class="fas fa-handshake text-yellow-400 text-5xl mt-1"></i>
+        <div class="w-1 h-32 bg-gray-500 rounded-full"></div>
+        <div>
+          <h4 class="text-xl font-semibold mb-2 text-yellow-300">Respect</h4>
+          <p class="text-sm text-gray-300 leading-relaxed">
+Treating all stakeholders with fairness, dignity, and empathy irrespective of socioeconomic background or perspective.
           </p>
         </div>
       </div>
@@ -606,17 +635,17 @@ class="fixed top-0 left-0 w-full z-50">
       <section class="bg-gray-100 relative overflow-hidden py-10">
         <!-- Background Image -->
         <img
-          src="https://res.cloudinary.com/temmarie/image/upload/v1748248419/young-african-businessman-businessman-shaking-hand-front-glass-window_bwrmlf.webp"
+          src="https://res.cloudinary.com/temmarie/image/upload/v1747832404/big-ben-houses-parliament-london-uk_dyuwex.webp"
           alt="impact"
           class="absolute inset-0 w-full h-full object-cover z-0"
         />
         <!-- Overlay -->
-        <div class="absolute inset-0 bg-gray-300/90 z-0"></div>
+        <div class="absolute inset-0 bg-black/50 z-0"></div>
 
         <!-- Content -->
         <div class="relative z-10 mx-auto max-w-7xl px-4">
           <div class="flex justify-center">
-            <div class="text-black text-center p-12 max-w-2xl">
+            <div class="text-white text-center p-12 max-w-2xl">
               <h3 class="text-3xl md:text-4xl font-bold mb-6">
                 Let Us Help You Succeed In The UK
               </h3>
@@ -629,7 +658,7 @@ class="fixed top-0 left-0 w-full z-50">
                 href="about.html#contact"
                 class="inline-block bg-yellow-400 text-black px-6 py-3 font-semibold hover:border-2 hover:border-yellow-400 hover:bg-transparent hover:text-yellow-500 transition-all"
               >
-                Get Your UK Business Boost Today
+                Contact Us Now
               </a>
             </div>
           </div>
@@ -640,6 +669,7 @@ class="fixed top-0 left-0 w-full z-50">
 
 
             <!-- Footer -->
+          <!-- Footer -->
     <footer class="bg-black text-white py-16 border-t border-white/10">
       <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -670,7 +700,8 @@ class="fixed top-0 left-0 w-full z-50">
              
              </br>
                <span class="text-yellow-400 font-semibold">
-We don't just add you value - we save you time and money.
+Come leverage on our versatility and local know-how whilst cutting your operational carbon footprint.
+
                </span>
                
             </p>
@@ -728,12 +759,11 @@ We don't just add you value - we save you time and money.
                 <a href="services.html#services" class="hover:text-yellow-400">Meetings & Conferences</a>
               </li>
                <li>
-                <a href="services.html" class="hover:text-yellow-400">Airport Pickups & Accommodations Facilitation</a>
+                <a href="services.html" class="hover:text-yellow-400">Airport Meet & Greet and Accommodation Facilitation</a>
               </li>
             </ul>
           </div>
           <!-- Navigation -->
-           
           <div>
             <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
             <ul class="space-y-2 text-white/70 text-sm">
