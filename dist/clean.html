@@ -20,6 +20,73 @@
       Our Core Values
     </h3>
 
+    <div class="relative w-full h-auto md:w-[32rem] md:h-[32rem]">
+      <!-- Cards -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-none md:absolute top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2"
+      >
+        <!-- Center Card -->
+        <div
+          class="text-xl bg-black border-2 border-yellow-400 shadow-md p-6 w-full md:w-28 md:h-28 flex justify-center items-center rounded-lg md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2"
+        >
+          <span>
+            <i class="fa fa-leaf text-yellow-400 text-3xl mt-1"></i>
+            Sustainability
+          </span>
+        </div>
+
+        <!-- Top Card -->
+        <div
+          class="text-xl bg-black border-2 border-yellow-400 shadow-md p-8 w-full md:w-28 md:h-28 flex justify-center items-center rounded-lg md:absolute md:top-0 md:left-1/2 md:-translate-x-1/2"
+        >
+          <span
+            ><i class="fa fa-shield-alt text-yellow-400 text-3xl mt-1"></i>
+            Integrity</span
+          >
+        </div>
+
+        <!-- Top-Right Card -->
+        <div
+          class="text-xl bg-black border-2 border-yellow-400 shadow-md p-4 w-full md:w-28 md:h-28 flex justify-center items-center rounded-lg md:absolute md:top-24 md:right-32"
+        >
+          <span
+            ><i class="fa fa-balance-scale text-yellow-400 text-3xl mt-1"></i>
+            Accountability</span
+          >
+        </div>
+
+        <!-- Bottom-Right Card -->
+        <div
+          class="text-xl bg-black border-2 border-yellow-400 shadow-md p-4 w-full md:w-28 md:h-28 flex justify-center items-center rounded-lg md:absolute md:bottom-24 md:right-32"
+        >
+          <span
+            ><i class="fa fa-lightbulb text-yellow-400 text-3xl mt-1"></i>
+            Innovation</span
+          >
+        </div>
+
+        <!-- Bottom-Left Card -->
+        <div
+          class="text-xl bg-black border-2 border-yellow-400 shadow-md p-4 w-full md:w-28 md:h-28 flex justify-center items-center rounded-lg md:absolute md:bottom-24 md:left-32"
+        >
+          <span
+            ><i class="fa fa-award text-yellow-400 text-3xl mt-1"></i>
+            Excellence</span
+          >
+        </div>
+
+        <!-- Top-Left Card -->
+        <div
+          class="text-xl bg-black border-2 border-yellow-400 shadow-md p-4 w-full md:w-28 md:h-28 flex justify-center items-center rounded-lg md:absolute md:top-24 md:left-32"
+        >
+          <span
+            ><i class="fas fa-handshake text-yellow-400 text-3xl mt-1"></i>
+            Respect</span
+          >
+        </div>
+      </div>
+    </div>
+
     <div
       class="relative w-full max-w-screen-xl aspect-square mx-auto flex items-center justify-center text-white px-4"
     >
@@ -404,3 +471,53 @@
     </div>
   </div>
 </section>
+
+from xml.etree.ElementTree import Element, SubElement, tostring from xml.dom
+import minidom from math import cos, sin, radians # Constants center_x, center_y
+= 400, 400 # Center of canvas radius = 250 box_size = 120 angle_step = 72 #
+Values data values = [ {"title": "Integrity", "icon": "🛡️", "desc": "Rooted in
+ethics and trustworthiness, we maintain the highest moral standards in all we
+do."}, {"title": "Accountability", "icon": "⚖️", "desc": "We take full
+responsibility for our actions and outcomes—owning both success and failure."},
+{"title": "Innovation", "icon": "💡", "desc": "By embracing new ideas, we
+continuously evolve our service quality and delivery methods."}, {"title":
+"Excellence", "icon": "🏆", "desc": "We strive for world-class standards,
+consistently aiming to exceed expectations and improve continuously."},
+{"title": "Respect", "icon": "🤝", "desc": "Treating all stakeholders with
+fairness, dignity, and empathy irrespective of socioeconomic background or
+perspective."} ] # Create root SVG element svg = Element('svg', width='800',
+height='800', xmlns='http://www.w3.org/2000/svg', style='background:#1a1a1a') #
+Central box center_group = SubElement(svg, 'g') SubElement(center_group, 'rect',
+x=str(center_x - 90), y=str(center_y - 90), width="180", height="180",
+fill="#2d2d2d", stroke="#facc15", stroke_width="4", rx="10")
+SubElement(center_group, 'text', x=str(center_x), y=str(center_y - 50),
+fill="#facc15", font_size="32", font_family="Arial", text_anchor="middle").text
+= "🌿" SubElement(center_group, 'text', x=str(center_x), y=str(center_y - 10),
+fill="#fcd34d", font_size="16", font_family="Arial", font_weight="bold",
+text_anchor="middle").text = "Sustainability" SubElement(center_group, 'text',
+x=str(center_x), y=str(center_y + 20), fill="#d1d5db", font_size="10",
+font_family="Arial", text_anchor="middle").text = "Reducing travel emissions"
+SubElement(center_group, 'text', x=str(center_x), y=str(center_y + 34),
+fill="#d1d5db", font_size="10", font_family="Arial", text_anchor="middle").text
+= "through representation in the UK." # Outer value boxes for i, val in
+enumerate(values): angle_deg = i * angle_step - 90 angle_rad =
+radians(angle_deg) x = center_x + radius * cos(angle_rad) - box_size / 2 y =
+center_y + radius * sin(angle_rad) - box_size / 2 group = SubElement(svg, 'g')
+SubElement(group, 'rect', x=str(x), y=str(y), width=str(box_size),
+height=str(box_size), fill="#374151", rx="10") SubElement(group, 'text', x=str(x
++ box_size / 2), y=str(y + 24), fill="#facc15", font_size="20",
+font_family="Arial", text_anchor="middle").text = val["icon"] SubElement(group,
+'text', x=str(x + box_size / 2), y=str(y + 45), fill="#fcd34d", font_size="12",
+font_family="Arial", font_weight="bold", text_anchor="middle").text =
+val["title"] lines = val["desc"].split() line1 = " ".join(lines[:6]) line2 = "
+".join(lines[6:12]) line3 = " ".join(lines[12:18]) SubElement(group, 'text',
+x=str(x + box_size / 2), y=str(y + 65), fill="#d1d5db", font_size="8",
+font_family="Arial", text_anchor="middle").text = line1 SubElement(group,
+'text', x=str(x + box_size / 2), y=str(y + 75), fill="#d1d5db", font_size="8",
+font_family="Arial", text_anchor="middle").text = line2 SubElement(group,
+'text', x=str(x + box_size / 2), y=str(y + 85), fill="#d1d5db", font_size="8",
+font_family="Arial", text_anchor="middle").text = line3 # Pretty-printing the
+SVG rough_string = tostring(svg, 'utf-8') reparsed =
+minidom.parseString(rough_string) pretty_svg = reparsed.toprettyxml(indent=" ")
+# Save the SVG to a file file_path = "/mnt/data/values_infographic.svg" with
+open(file_path, "w") as f: f.write(pretty_svg) file_path
